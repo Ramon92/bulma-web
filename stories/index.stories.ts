@@ -1,1 +1,1 @@
-import '../src/components/button/stories/index.stories';
+import '../packages/button/stories/index.stories';

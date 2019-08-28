@@ -1,6 +1,6 @@
-@import '~bulma/sass/utilities/_all.sass';
+@import '../../../node_modules/bulma/sass/utilities/all';
 
-@import '~bulma/sass/elements/button.sass';
+@import '../../../node_modules/bulma/sass/elements/button';
 
 .btn {
   height: 24px;

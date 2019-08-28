@@ -16,16 +16,17 @@
         "strict": false,
         "noImplicitThis": true,
         "alwaysStrict": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "experimentalDecorators": true
     },
     "include": [
-        "src/**/*",
+        "packages/**/*",
         "node_modules/@open-wc/**/*.js",
         "d.ts"
     ],
     "exclude": [
         "node_modules/!(@open-wc)",
         "build",
-        "scripts",
+        "scripts"
     ]
 }
