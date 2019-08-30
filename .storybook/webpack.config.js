@@ -4,28 +4,14 @@ const defaultConfig = require('@open-wc/demoing-storybook/default-storybook-webp
 module.exports = ({ config }) => {
   const newConfig = defaultConfig({
     config,
-    transpilePackages: ['lit-html', 'lit-element', '@open-wc'],
+    transpilePackages: ['lit-html', 'lit-element', '@open-wc', '@lion'],
   });
 
-  newConfig.module.rules.push({
-    test: [/\.stories\.ts$/, /index\.ts/],
-    loaders: [require.resolve('@storybook/addon-storysource/loader')],
-    enforce: 'pre',
-  });
-
-  newConfig.module.rules.push({
-    test: /\.(ts|tsx)$/,
-    use: [
-      {
-        loader: require.resolve('awesome-typescript-loader'),
-      },
-      // Optional
-      {
-        loader: require.resolve('react-docgen-typescript-loader'),
-      },
-    ],
-  });
-  newConfig.resolve.extensions.push('.ts', '.tsx');
+  // newConfig.module.rules.push({
+  //   test: [/\.stories\.js$/, /index\.js/],
+  //   loaders: [require.resolve('@storybook/addon-storysource/loader')],
+  //   enforce: 'pre',
+  // });
 
   newConfig.module.rules.push({
     test: /\.s(c|a)ss$/,
