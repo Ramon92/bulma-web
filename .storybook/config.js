@@ -1,7 +1,7 @@
 import { configure } from '@storybook/polymer';
 import '@storybook/addon-console';
 
-const req = require.context('../stories', true, /\.stories\.js$/);
+const req = require.context('../stories', true, /\.stories\.ts$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }

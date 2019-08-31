@@ -1,23 +1,23 @@
-import { html } from 'lit-element';
+import { html, unsafeCSS, css, property } from 'lit-element';
 import { LionButton } from '@lion/button';
-import buttonStyles from './button.scss';
+import buttonStyles from './button.css';
 
 export class BwButton extends LionButton {
-  static get properties() {
-    return {
-      primary: {
-        type: Boolean,
-        reflect: true,
-      },
-      type: {
-        type: String,
-        reflect: true,
-      },
-    };
+  @property({ type: Boolean }) primary;
+
+  @property({ type: String, reflect: true }) type;
+
+  connectedCallback() {
+    super.connectedCallback();
+    // console.log('BUTTON: ',unsafeCSS`${buttonStyles}`);
   }
 
   static get styles() {
-    return [buttonStyles];
+    return [
+      css`
+        ${unsafeCSS(buttonStyles)}
+      `,
+    ];
   }
 
   render() {
