@@ -41,6 +41,7 @@
     "css-loader": "^3.2.0",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "eslint-utils": "^1.4.2",
     "extract-loader": "^3.1.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "husky": "^3.0.4",
