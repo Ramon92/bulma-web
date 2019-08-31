@@ -1,52 +1,70 @@
 {
+  "name": "@bulma-web/root",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "site:build": "npm run storybook:build",
+    "start": "yarn storybook",
+    "site:build": "yarn storybook:build",
     "storybook": "start-storybook -p 9001",
     "storybook:build": "build-storybook -o _site -s storybook-static",
-    "lint:eslint": "eslint --ext .js,.html .",
-    "format:eslint": "eslint --ext .js,.html . --fix",
-    "lint:prettier": "prettier \"**/*.js\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
-    "format:prettier": "prettier \"**/*.js\" --write",
+    "lint:eslint": "eslint --ext .ts,.js,.html .",
+    "format:eslint": "eslint --ext .ts,.js,.html . --fix",
+    "lint:prettier": "prettier \"**/*.{js,ts}\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
+    "format:prettier": "prettier \"**/*.{js,ts}\" --write",
     "lint": "npm run lint:eslint && npm run lint:prettier",
-    "format": "npm run format:eslint && npm run format:prettier"
+    "format": "npm run format:eslint && npm run format:prettier",
+    "check-types": "tsc"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.0.0",
-    "@commitlint/config-conventional": "^7.0.0",
-    "@open-wc/demoing-storybook": "^0.2.0",
-    "@open-wc/eslint-config": "^1.0.0",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-typescript": "^7.3.3",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@open-wc/demoing-storybook": "^0.3.0",
+    "@open-wc/eslint-config": "^1.1.1",
     "@open-wc/prettier-config": "^0.1.0",
-    "@storybook/addon-info": "^5.1.9",
-    "@types/jest": "^24.0.15",
+    "@storybook/addon-info": "^5.1.11",
+    "@types/jest": "^24.0.18",
     "@types/node-sass": "^4.11.0",
     "@types/storybook__react": "^4.0.2",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
     "awesome-typescript-loader": "^5.2.1",
-    "css-loader": "^3.0.0",
+    "babel-plugin-inline-import": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-utils": "^1.4.2",
     "extract-loader": "^3.1.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "husky": "^1.0.0",
-    "jest": "^24.8.0",
-    "lint-staged": "^8.0.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lerna": "^3.16.4",
+    "lint-staged": "^9.2.5",
     "lit-scss-loader": "^1.0.0",
     "node-sass": "^4.12.0",
-    "react-docgen-typescript-loader": "^3.1.0",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
+    "react-docgen-typescript-loader": "^3.1.1",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^1.0.0",
     "ts-jest": "^24.0.2",
     "ts-loader": "^6.0.4",
-    "typescript": "^3.5.3",
-    "typings-for-css-modules-loader": "^1.7.0"
+    "typescript": "^3.6.2",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "yarn": "^1.17.3"
   },
   "lint-staged": {
-    "*.js": [
+    "*.ts": [
       "eslint --fix",
       "prettier --write",
       "git add"
     ]
   },
-  "dependencies": {
-    "@lion/button": "^0.1.38",
-    "bulma": "^0.7.5",
-    "lit-element": "^2.2.0"
-  }
+  "dependencies": {}
 }

@@ -1,6 +1,6 @@
-@import '~bulma/sass/utilities/_all.sass';
+@import '../../../node_modules/bulma/sass/utilities/_all.sass';
 
-@import '~bulma/sass/elements/button.sass';
+@import '../../../node_modules/bulma/sass/elements/button.sass';
 
 .btn {
   height: 24px;
@@ -10,6 +10,7 @@
   position: absolute;
   visibility: hidden;
 }
+
 
 .click-area {
   position: absolute;
@@ -26,6 +27,12 @@
 }
 
 :host(:focus) .btn {
-  border-color: lightblue;
-  box-shadow: 0 0 8px lightblue, 0 0 0 1px lightblue;
+  border-color: $blue;
+  box-shadow: 0 0 0 0.125em rgba(50,115,220,.25);
+}
+
+.button {
+  &.is-primary {
+    background-color: var(--primary, $primary);
+  }
 }

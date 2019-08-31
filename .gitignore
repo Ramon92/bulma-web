@@ -1,3 +1,5 @@
 .history
 build
 node_modules
+.idea
+**/*.css
