@@ -1,0 +1,34 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+- master
+
+variables:
+  CI: true
+  # Overrides the Yarn and NPM cache directories so they are on the same drive as the source. This helps improve build performance on Windows hosted agents.
+  YARN_CACHE_FOLDER: $(Build.SourcesDirectory)/../yarn-cache
+  NPM_CONFIG_CACHE: $(Build.SourcesDirectory)/../npm-cache
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '10.x'
+  displayName: 'Install Node.js'
+
+- script: |
+    yarn install
+    yarn build
+  displayName: 'yarn install and build'
+
+- bash: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+  displayName: 'Set npm auth'
+
+- script: |
+      yarn lerna publish --message 'chore: release new versions' --yes"
+      displayName: 'publish'
