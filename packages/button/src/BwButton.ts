@@ -9,7 +9,9 @@ export class BwButton extends LionButton {
 
   @property({ type: String, reflect: true }) display = '';
 
-  static get styles() {
+  @property({ type: Boolean, reflect: true }) outlined;
+
+  static get styles(): any {
     return [
       css`
         ${unsafeCSS(buttonStyles)}
@@ -19,7 +21,10 @@ export class BwButton extends LionButton {
 
   render() {
     return html`
-      <div class="btn button ${this.type} ${this.size} ${this.display}">
+      <div
+        class="btn button ${this.type} ${this.size} ${this.display} ${this.outlined &&
+          'is-outlined'}"
+      >
         ${this._renderBefore()}
         ${this.$$slot('icon-left') &&
           html`

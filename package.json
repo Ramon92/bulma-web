@@ -16,7 +16,8 @@
     "format:prettier": "prettier \"**/*.{js,ts}\" --write",
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "format": "npm run format:eslint && npm run format:prettier",
-    "check-types": "tsc"
+    "check-types": "tsc",
+    "build": "lerna run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -24,6 +25,7 @@
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.6.2",
     "@babel/preset-typescript": "^7.3.3",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",

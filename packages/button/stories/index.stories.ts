@@ -3,7 +3,8 @@ import { storiesOf, html } from '@open-wc/demoing-storybook';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@fortawesome/fontawesome-free/js/all';
 import '@lion/button/lion-button';
-import '../bw-button';
+import '../src/bw-button';
+import { TemplateResult } from 'lit-html';
 
 storiesOf('Buttons|Button', module)
   .add(
@@ -14,7 +15,7 @@ storiesOf('Buttons|Button', module)
   )
   .add(
     'Bulma button',
-    () => html`
+    (): TemplateResult => html`
             <style>
             body {
             font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -82,6 +83,15 @@ storiesOf('Buttons|Button', module)
                      <i slot="icon-right" class="fab fa-github"></i>
                      Github
                 </bw-button>
+            </div>
+            
+            <h2># Outlined</h2>
+            <div class="buttons">
+                <bw-button outlined>Outlined</bw-button>
+                <bw-button type="is-primary" outlined>Outlined</bw-button>
+                <bw-button type="is-success" outlined>Outlined</bw-button>
+                <bw-button type="is-danger" outlined>Outlined</bw-button>
+                <bw-button type="is-warning" outlined>Outlined</bw-button>
             </div>
     `,
   );
