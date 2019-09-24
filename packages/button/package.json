@@ -11,7 +11,8 @@
   "author": "Ramon Osenga <ramon.osenga@gmail.com>",
   "homepage": "https://github.com/Ramon92/bulma-web#readme",
   "license": "MIT",
-  "main": "index.js",
+  "main": "bw-button.js",
+  "module": "bw-button.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -24,7 +25,10 @@
     "url": "git+https://github.com/Ramon92/bulma-web.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "npm run build:types && npm run build:js",
+    "build:js": " yarn babel ./ -d lib --extensions \".ts\" --config-file ../.babelrc --source-maps inline",
+    "build:types": "tsc --emitDeclarationOnly -p ./"
   },
   "bugs": {
     "url": "https://github.com/Ramon92/bulma-web/issues"

@@ -3,12 +3,19 @@
 @import '../../../node_modules/bulma/sass/elements/button.sass';
 
 .btn {
-  height: 24px;
+  box-sizing: border-box;
+  height: 36px;
 }
 
 :host .btn ::slotted(button) {
   position: absolute;
   visibility: hidden;
+}
+
+
+:host([display=is-fullwidth]) {
+  display: flex;
+  width: 100%;
 }
 
 
@@ -35,4 +42,14 @@
   &.is-primary {
     background-color: var(--primary, $primary);
   }
+  &.is-small {
+    height: 27px;
+  }
+  &.is-medium {
+    height: 45px;
+  }
+  &.is-large {
+    height: 54px;
+  }
+
 }

@@ -3,3 +3,7 @@ build
 node_modules
 .idea
 **/*.css
+packages/**/*.js
+packages/**/*.js.map
+packages/**/*.d.ts
+packages/**/*.d.ts.map

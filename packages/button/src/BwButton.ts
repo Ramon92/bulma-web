@@ -3,16 +3,15 @@ import { LionButton } from '@lion/button';
 import buttonStyles from './button.css';
 
 export class BwButton extends LionButton {
-  @property({ type: Boolean }) primary;
+  @property({ type: String, reflect: true }) type = '';
 
-  @property({ type: String, reflect: true }) type;
+  @property({ type: String, reflect: true }) size = '';
 
-  connectedCallback() {
-    super.connectedCallback();
-    // console.log('BUTTON: ',unsafeCSS`${buttonStyles}`);
-  }
+  @property({ type: String, reflect: true }) display = '';
 
-  static get styles() {
+  @property({ type: Boolean, reflect: true }) outlined;
+
+  static get styles(): any {
     return [
       css`
         ${unsafeCSS(buttonStyles)}
@@ -22,9 +21,24 @@ export class BwButton extends LionButton {
 
   render() {
     return html`
-      <div class="btn button ${this.type}">
+      <div
+        class="btn button ${this.type} ${this.size} ${this.display} ${this.outlined &&
+          'is-outlined'}"
+      >
         ${this._renderBefore()}
-        <slot></slot>
+        ${this.$$slot('icon-left') &&
+          html`
+            <span class="icon">
+              <slot name="icon-left"></slot>
+            </span>
+          `}
+        <span><slot></slot></span>
+        ${this.$$slot('icon-right') &&
+          html`
+            <span class="icon">
+              <slot name="icon-right"></slot>
+            </span>
+          `}
         ${this._renderAfter()}
         <slot name="_button"></slot>
         <div class="click-area"></div>
@@ -40,5 +54,9 @@ export class BwButton extends LionButton {
   /* eslint-disable-next-line class-methods-use-this */
   _renderAfter() {
     return html``;
+  }
+
+  $$slot(slot: string): HTMLElement {
+    return super.$$slot(slot);
   }
 }
