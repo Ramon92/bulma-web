@@ -1,18 +1,37 @@
 {
-  "presets": ["@babel/preset-env", "@babel/preset-typescript"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        }
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
   "plugins": [
-    ["@babel/plugin-proposal-decorators", {
-      "legacy": true,
-    }],
-    ["@babel/plugin-proposal-class-properties", {
-      "loose": true
-    }],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
     "@babel/plugin-syntax-dynamic-import",
     "@babel/plugin-proposal-object-rest-spread",
-    ["babel-plugin-inline-import", {
-      "extensions": [
-        ".css"
-      ]
-    }]
+    [
+      "babel-plugin-inline-import",
+      {
+        "extensions": [
+          ".css"
+        ]
+      }
+    ]
   ]
 }

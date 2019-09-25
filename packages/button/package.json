@@ -26,9 +26,10 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "npm run build:types && npm run build:js",
-    "build:js": " yarn babel ./ -d lib --extensions \".ts\" --config-file ../.babelrc --source-maps inline",
-    "build:types": "tsc --emitDeclarationOnly -p ./"
+    "build": "yarn build:scss && yarn build:js && yarn build:types",
+    "build:js": "yarn babel src -d ./ --extensions \".ts\" --config-file ./.babelrc --source-maps inline",
+    "build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json",
+    "build:scss": "node-sass src -o src"
   },
   "bugs": {
     "url": "https://github.com/Ramon92/bulma-web/issues"
