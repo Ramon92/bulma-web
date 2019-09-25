@@ -1,5 +1,5 @@
 {
-  "name": "button",
+  "name": "@bulma/button",
   "version": "0.1.2",
   "description": "A bulma.io based web-component button",
   "keywords": [
@@ -39,5 +39,5 @@
     "bulma": "^0.7.5",
     "lit-element": "^2.2.1"
   },
-  "gitHead": "ce08f96cc4d99288b935e2facdc7526ebe9acc0e"
+  "gitHead": "2363af3eebb8fd1b39e1fcf95d535c1065f15c54"
 }
