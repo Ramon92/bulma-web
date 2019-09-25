@@ -6,7 +6,8 @@
     "packages/*"
   ],
   "scripts": {
-    "start": "concurrently \"yarn storybook\" \"node-sass -w ./packages/**/src/ -o ./packages/**/src/\" ",
+    "start": "concurrently \"yarn storybook\" \"yarn watch:scss\" ",
+    "watch:scss": "node-sass -w ./packages/**/src/ -o ./packages/**/src/",
     "site:build": "yarn storybook:build",
     "storybook": "start-storybook -p 9001",
     "storybook:build": "build-storybook -o _site -s storybook-static",
