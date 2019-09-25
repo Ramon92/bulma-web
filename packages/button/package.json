@@ -11,14 +11,14 @@
   "author": "Ramon Osenga <ramon.osenga@gmail.com>",
   "homepage": "https://github.com/Ramon92/bulma-web#readme",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "bw-button.js",
   "module": "bw-button.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
-  },
-  "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
   },
   "repository": {
     "type": "git",
@@ -38,5 +38,6 @@
     "@lion/button": "^0.3.11",
     "bulma": "^0.7.5",
     "lit-element": "^2.2.1"
-  }
+  },
+  "gitHead": "ce08f96cc4d99288b935e2facdc7526ebe9acc0e"
 }
