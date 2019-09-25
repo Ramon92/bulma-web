@@ -42,6 +42,9 @@
   &.is-primary {
     background-color: var(--primary, $primary);
   }
+  &.is-secondary{
+    background-color: var(--secondary, $blue);
+  }
   &.is-small {
     height: 27px;
   }
