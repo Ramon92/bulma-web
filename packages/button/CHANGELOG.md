@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/Ramon92/bulma-web/compare/button@0.1.0...button@0.1.1) (2019-09-25)
+
+
+### Bug Fixes
+
+* **button:** add custom color ([c1641d1](https://github.com/Ramon92/bulma-web/commit/c1641d1))
+
+
+
+
+
 # 0.1.0 (2019-09-25)
 
 
