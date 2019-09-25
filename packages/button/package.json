@@ -1,5 +1,5 @@
 {
-  "name": "@bulma/button",
+  "name": "@bulma-web/button",
   "version": "0.2.0",
   "description": "A bulma.io based web-component button",
   "keywords": [

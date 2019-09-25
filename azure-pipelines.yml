@@ -27,10 +27,10 @@ steps:
   displayName: 'yarn install and build'
 
 - bash: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   displayName: 'Set npm auth'
 
 - script: |
-    ./node_modules/.bin/lerna publish --message 'chore: release new versions' --yes
+    ./node_modules/.bin/lerna publish from-package --message 'chore: release new versions' --yes
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
-  displayName: 'publish'
-
+  displayName: 'publish to npm'
