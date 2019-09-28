@@ -21,6 +21,9 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
+- checkout: self
+  persistCredentials: true
+
 - script: |
     yarn install
     yarn build
