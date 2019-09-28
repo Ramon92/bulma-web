@@ -31,9 +31,7 @@ steps:
 - script: |
     yarn install
     yarn build
-  displayName: 'yarn install and build'
-
-- script: |
-    ./node_modules/.bin/lerna publish --message 'chore: release new versions' --yes
+    yarn lerna publish --message 'chore: release new versions' --yes
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
-  displayName: 'publish to npm'
+  displayName: 'yarn install build and publish'
+
