@@ -21,9 +21,6 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- checkout: self
-  persistCredentials: true
-
 - bash: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   displayName: 'Set npm auth'
