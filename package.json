@@ -10,7 +10,7 @@
     "watch:scss": "node-sass -w ./packages/**/src/ -o ./packages/**/src/",
     "site:build": "yarn storybook:build",
     "storybook": "start-storybook -p 9001",
-    "storybook:build": "build-storybook -o _site -s storybook-static",
+    "storybook:build": "yarn build && build-storybook -o _site -s storybook-static",
     "lint:eslint": "eslint --ext .ts,.js,.html .",
     "format:eslint": "eslint --ext .ts,.js,.html . --fix",
     "lint:prettier": "prettier \"**/*.{js,ts}\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
