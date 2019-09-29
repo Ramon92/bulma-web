@@ -18,7 +18,8 @@
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "format": "npm run format:eslint && npm run format:prettier",
     "check-types": "tsc",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "@bulma-web/button": "yarn workspace @bulma-web/button"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
