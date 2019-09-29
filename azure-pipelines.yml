@@ -27,9 +27,10 @@ steps:
     git config --global user.email "azure@bot"
     git config --global user.name "Azure pipelines"
     git remote rm origin
-    git remote add origin https://$GITHUB_TOKEN@/github.com/Ramon92/bulma-web.git
+    git remote add origin https://$GITHUB_TOKEN@github.com/Ramon92/bulma-web.git
     git fetch origin
     git checkout master 
+  displayName: 'checkout master'
 
 - script: |
     yarn install
