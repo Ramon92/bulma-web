@@ -23,14 +23,21 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- bash: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
-  displayName: 'Set npm auth'
+- script: |
+    git config --global user.email "azure@bot"
+    git config --global user.name "Azure pipelines"
+    git remote rm origin
+    git remote add origin https://$GITHUB_TOKEN@/github.com/Ramon92/bulma-web.git
+    git fetch origin
+    git checkout master 
 
 - script: |
     yarn install
     yarn build
-    yarn lerna publish --message 'chore: release new versions' --yes
+  displayName: 'yarn install and build'
+
+- script: |
+    yarn lerna publish --message 'chore: release new versions' --yes --registry "//registry.npmjs.org/:_authToken=$NPM_TOKEN"
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
-  displayName: 'yarn install build and publish'
+  displayName: 'publish packages'
 
