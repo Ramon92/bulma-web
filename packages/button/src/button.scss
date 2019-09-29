@@ -39,6 +39,7 @@
 }
 
 .button {
+  background-color: var(--button-background-color,$button-background-color);
   &.is-primary {
     background-color: var(--primary, $primary);
   }
