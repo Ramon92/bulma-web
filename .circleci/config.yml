@@ -41,6 +41,7 @@ jobs:
       # will add github as known host
       - checkout
       - attach_workspace:
+          at: ~/repo
       - add_ssh_keys:
           fingerprints:
             - '18:46:88:bc:5b:b8:40:eb:d2:66:0a:67:fa:79:6f:21'
