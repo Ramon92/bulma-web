@@ -1,5 +1,39 @@
 @import '../../../node_modules/bulma/sass/utilities/_all.sass';
 
+$button-color: var(--button-color, $grey-darker);
+$button-background-color: var(--button-background-color, $white);
+
+$button-border-color: var(--button-border-color, $grey-lighter);
+$button-border-width: var(--button-border-width, $control-border-width);
+
+$button-padding-vertical: var(--button-padding-vertical, calc(0.375em - #{$button-border-width}));
+$button-padding-horizontal: var(--button-padding-horizontal, 0.75em);
+
+$button-hover-color: var(--button-hover-color, $link-hover);
+$button-hover-border-color: var(--button-hover-border-color, $link-hover-border);
+
+$button-focus-color: var(--button-focus-color, $link-focus);
+$button-focus-border-color: var(--button-focus-border-color, $link-focus-border);
+$button-focus-box-shadow-size: var(--button-focus-box-shadow-size, 0 0 0 0.125em);
+
+$button-active-color: var(--button-active-color, $link-active);
+$button-active-border-color: var(--button-active-border-color, $link-active-border);
+
+$button-text-color: var(--button-text-color, $text);
+// TODO: add this and override the darken functionality
+// $button-text-hover-background-color: var(--button-text-hover-background-color, $background);
+$button-text-hover-color: var(--button-text-hover-color, $text-strong);
+
+$button-disabled-background-color: var(--button-disabled-background-color, $white);
+$button-disabled-border-color: var(--button-disabled-border-color, $grey-lighter);
+$button-disabled-shadow: var(--button-disabled-shadow, none);
+$button-disabled-opacity: var(--button-disabled-opacity, 0.5);
+
+$button-static-color: var(--button-static-color, $grey);
+$button-static-background-color: var(--button-static-background-color, $white-ter);
+$button-static-border-color: var(--button-static-border-color, $grey-lighter);
+
+
 @import '../../../node_modules/bulma/sass/elements/button.sass';
 
 .btn {
@@ -17,7 +51,6 @@
   display: flex;
   width: 100%;
 }
-
 
 .click-area {
   position: absolute;
@@ -39,8 +72,7 @@
 }
 
 .button {
-  &.is-primary {
-    background-color: var(--primary, $primary);
+  &.is-active {
   }
   &.is-small {
     height: 27px;
@@ -51,5 +83,15 @@
   &.is-large {
     height: 54px;
   }
+  // TODO: add theming with color-mod css function wit PostCss ccsnext
+  // @each $name, $pair in $colors{
+  //   $color: nth($pair, 1);  
+  //   $color-invert: nth($pair, 2);
 
+  //   &.is-#{$name}{
+  //     background-color: var(--#{$name}, $color);
+  //     border-color: transparent;
+  //     color: $color-invert;
+  //   }
+  // }
 }

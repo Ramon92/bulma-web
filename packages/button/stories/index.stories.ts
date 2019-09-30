@@ -6,16 +6,9 @@ import '@lion/button/lion-button';
 import '../src/bw-button';
 import { TemplateResult } from 'lit-html';
 
-storiesOf('Buttons|Button', module)
-  .add(
-    'Lion button for testing',
-    () => html`
-      <lion-button>Test button</lion-button>
-    `,
-  )
-  .add(
-    'Bulma button',
-    (): TemplateResult => html`
+storiesOf('Buttons|Button', module).add(
+  'Bulma button',
+  (): TemplateResult => html`
             <style>
             body {
             font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -27,6 +20,12 @@ storiesOf('Buttons|Button', module)
             .buttons {
                 margin-bottom: 15px;;
             }
+            .buttons.inverted {
+                background: #00d1b2;
+                max-width: 500px;
+                padding: 20px;
+                border-radius: 5px;
+            } 
             .buttons.display {
                 max-width: 300px;
             }
@@ -93,5 +92,28 @@ storiesOf('Buttons|Button', module)
                 <bw-button type="is-danger" outlined>Outlined</bw-button>
                 <bw-button type="is-warning" outlined>Outlined</bw-button>
             </div>
+            <h2>Inverted</h2>
+            <div class="buttons inverted">
+                <bw-button type="is-primary" inverted>Inverted</bw-button>
+                <bw-button type="is-success" inverted>Inverted</bw-button>
+                <bw-button type="is-danger" inverted>Inverted</bw-button>
+                <bw-button type="is-warning" inverted>Inverted</bw-button>
+            </div>
+
+            <h2>Inverted Outlined</h2>
+            <div class="buttons inverted">
+                <bw-button type="is-primary" outlined inverted>Inverted</bw-button>
+                <bw-button type="is-success" outlined inverted>Inverted</bw-button>
+                <bw-button type="is-danger" outlined inverted>Inverted</bw-button>
+                <bw-button type="is-warning" outlined inverted>Inverted</bw-button>
+            </div>
+
+            <h2>States and Types</h2>
+            <div class="buttons">
+                <bw-button loading>loading</bw-button>
+                <bw-button disabled>Disabled</bw-button>
+                <bw-button rounded>Rounded</bw-button>
+            </div>
+           
     `,
-  );
+);
