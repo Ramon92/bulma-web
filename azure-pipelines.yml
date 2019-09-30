@@ -30,7 +30,7 @@ steps:
     git remote add origin https://$GITHUB_TOKEN@github.com/Ramon92/bulma-web.git
     git fetch origin
     git checkout master 
-  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
+  condition: eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   displayName: 'checkout master'
 
 - script: |
