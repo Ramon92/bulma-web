@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Ramon92/bulma-web/compare/@bulma-web/button@0.3.0...@bulma-web/button@0.4.0) (2019-09-30)
+
+
+### Features
+
+* **button:** add all buttons options and fix build ([ae11835](https://github.com/Ramon92/bulma-web/commit/ae11835))
+
+
+
+
+
 # 0.3.0 (2019-09-28)
 
 
