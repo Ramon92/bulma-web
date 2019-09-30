@@ -41,10 +41,9 @@ jobs:
       # will add github as known host
       - checkout
       - attach_workspace:
-          at: ~/repo
       - add_ssh_keys:
           fingerprints:
-            - '55:7a:3d:f1:55:73:01:12:8f:47:d7:b3:d9:3d:d9:a9'
+            - '18:46:88:bc:5b:b8:40:eb:d2:66:0a:67:fa:79:6f:21'
       - run:
           name: Authenticate with registry
           command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
