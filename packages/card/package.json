@@ -1,0 +1,37 @@
+{
+  "name": "@bulma-web/card",
+  "version": "0.0.1",
+  "description": "A bulma based card webcomponent",
+  "keywords": [
+    "bulma",
+    "bulma-web",
+    "webcomponent",
+    "lit-html",
+    "lit-element"
+  ],
+  "author": "Ramon Osenga <ramon.osenga@outlook.com>",
+  "homepage": "https://github.com/Ramon92/bulma-web#readme",
+  "license": "MIT",
+  "main": "card.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramon92/bulma-web.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Ramon92/bulma-web/issues"
+  },
+  "dependencies": {
+    "bulma": "^0.7.5",
+    "lit-element": "^2.2.1"
+  }
+}

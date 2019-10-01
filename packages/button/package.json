@@ -39,6 +39,5 @@
     "bulma": "^0.7.5",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2"
-  },
-  "gitHead": "2363af3eebb8fd1b39e1fcf95d535c1065f15c54"
+  }
 }
