@@ -52,36 +52,7 @@ module.exports = async ({ config, mode }) => {
     },
   });
 
-  newConfig.resolve.extensions.push('.ts', '.css');
-
-  // newConfig.module.rules.push({
-  //   test: /\.s(c|a)ss$/,
-  //   include: path.resolve(__dirname, '../'),
-  //   use: [
-  //     {
-  //       loader: 'lit-scss-loader',
-  //       options: {
-  //         minify: false, // defaults to false
-  //       },
-  //     },
-  //     {
-  //       loader: 'extract-loader',
-  //     },
-  //     {
-  //       loader: 'css-loader',
-  //       options: {
-  //         sourceMap: true,
-  //       },
-  //     },
-  //     {
-  //       loader: 'sass-loader',
-  //       options: {
-  //         sourceMap: true,
-  //         // options...
-  //       },
-  //     },
-  //   ],
-  // });
+  newConfig.resolve.extensions.push('.ts', '.css', 'scss');
 
   return newConfig;
 };

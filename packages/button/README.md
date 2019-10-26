@@ -29,7 +29,7 @@ import '@bulma-web/button'
 |disabled   |Set the button to the disabled state   |Boolean    |default `false`                |
 |rounded    |Make the button rounded                |Boolean    |default `false`                |
 
-### Custom CSS Variablees for customization
+### Custom CSS Variables for customization
 |Variable                   |Description            |Type       |
 |---------------------------|-----------------------|-----------|
 |`--button-color`           |color      |color code |

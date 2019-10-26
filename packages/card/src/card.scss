@@ -1,27 +1,58 @@
+$border: #ededed;
+
 @import '../../../node_modules/bulma/sass//utilities/_all.sass';
 
-$card-color: $text !default;
-$card-background-color: $white !default;
-$card-shadow: 0 2px 3px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1) !default;
+$card-color: var(--card-color, $text);
+$card-background-color: var(--card-background-color, white);
+$card-shadow: var(--card-shadow, 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02));
 
-$card-header-background-color: transparent !default;
-$card-header-color: $text-strong !default;
-$card-header-padding: 0.75rem !default;
-$card-header-shadow: 0 1px 2px rgba($black, 0.1) !default;
-$card-header-weight: $weight-bold !default;
+$card-header-background-color: var(--card-header-background-color, transparent);
+$card-header-color: var(--card-header-color, $text-strong);
+$card-header-padding: var(--card-header-padding, 0.75rem);
+$card-header-shadow: var(--card-header-shadow, 0 1px 2px rgba($black, 0.1));
+$card-header-weight: var(--card-header-weight, $weight-bold);
 
-$card-content-background-color: transparent !default;
-$card-content-padding: 1.5rem !default;
+$card-content-background-color: var(--card-content-background-color, transparent);
+$card-content-padding: var(--card-content-padding, 1.5rem);
 
-$card-footer-background-color: transparent !default;
-$card-footer-border-top: 1px solid $border !default;
-$card-footer-padding: 0.75rem !default;
+$card-footer-background-color: var(--card-footer-background-color, transparent);
+$card-footer-border-top: var(--card-footer-border-top, 1px solid $border);
+$card-footer-padding: var(--card-footer-padding,0.75rem);
 
-$card-media-margin: $block-spacing !default;
+$card-media-margin: var(--card-media-margin, $block-spacing);
 
 @import '../../../node_modules/bulma/sass/components/card.sass';
 
-.card{
-    background: red;
+::slotted(*) {
+    margin: 0;
+    padding: 0;
+}
 
+::slotted([slot=footer-item]) {
+    @extend .card-footer-item;
+}
+
+::slotted([slot=header-title]) {
+    @extend .card-header-title;
+}
+
+::slotted([slot=header-icon]) {
+    @extend .card-header-icon;
+}
+
+::slotted([slot=footer-item]:not(:last-child)){
+    border-right: $card-footer-border-top;
+}
+
+::slotted([slot=image]) {
+    display: block;
+    position: relative;
+    height: auto;
+    width: 100%;
+}
+
+::slotted(img) {
+    display: block;
+    height: auto;
+    width: 100%;
 }
