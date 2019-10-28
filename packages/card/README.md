@@ -42,3 +42,11 @@ import '@bulma-web/card'
 |`--card-header-background-color`|background color for the card header|color code|
 |`--card-header-color`|text color for the card header|color code        |
 |`--card-header-padding`|padding size for the card header|unit size|
+|`--card-header-shadow`|shadow for card header|nox shadow notation|
+|`--card-header-weight`|font weight for card header|units|
+|`--card-content-background-color`|background color for card|color code|
+|`--card-content-padding`|padding for card content|unit size|
+|`--card-footer-background-color`|background color for the card footer|color code|
+|`--card-footer-border-top`|border top of card footer|cdd border shorthand notation|
+|`--card-footer-padding`|padding for card footer|unit size|
+|`--card-media-margin`|margin for card media|unit size|
