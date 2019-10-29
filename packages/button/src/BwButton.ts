@@ -4,11 +4,11 @@ import { LionButton } from '@lion/button';
 import buttonStyles from './button.css';
 
 export class BwButton extends (LionButton as any) {
-  @property({ type: String, reflect: true }) type;
+  @property({ type: String, reflect: true }) type: string;
 
-  @property({ type: String, reflect: true }) size;
+  @property({ type: String, reflect: true }) size: string;
 
-  @property({ type: String, reflect: true }) display;
+  @property({ type: String, reflect: true }) display: string;
 
   @property({ type: Boolean, reflect: true }) outlined: boolean;
 

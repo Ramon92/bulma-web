@@ -7,7 +7,8 @@
   ],
   "scripts": {
     "start": "concurrently \"yarn storybook\" \"yarn watch:scss\" ",
-    "watch:scss": "node-sass -w ./packages/**/src/ -o ./packages/**/src/",
+    "watch:scss": "node-sass -rw ./packages/ -o ./packages/",
+    "build:scss": "node-sass -r ./packages/ -o ./packages/",
     "site:build": "yarn storybook:build",
     "storybook": "start-storybook -p 9001",
     "storybook:build": "yarn build && build-storybook -o _site -s storybook-static",
@@ -19,7 +20,8 @@
     "format": "npm run format:eslint && npm run format:prettier",
     "check-types": "tsc",
     "build": "lerna run build",
-    "@bulma-web/button": "yarn workspace @bulma-web/button"
+    "@bulma-web/button": "yarn workspace @bulma-web/button",
+    "@bulma-web/card": "yarn workspace @bulma-web/card"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -32,6 +34,7 @@
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "@fortawesome/fontawesome-free": "^5.10.2",
+    "@open-wc/building-rollup": "^0.9.33",
     "@open-wc/demoing-storybook": "^0.3.0",
     "@open-wc/eslint-config": "^1.1.1",
     "@open-wc/prettier-config": "^0.1.0",
@@ -45,6 +48,7 @@
     "babel-plugin-inline-import": "^3.0.0",
     "concurrently": "^4.1.2",
     "css-loader": "^3.2.0",
+    "es-dev-server": "^1.18.3",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-utils": "^1.4.2",
@@ -57,6 +61,8 @@
     "lit-scss-loader": "^1.0.0",
     "node-sass": "^4.12.0",
     "react-docgen-typescript-loader": "^3.1.1",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.22.0",
     "sass-loader": "^7.3.1",
     "style-loader": "^1.0.0",
     "ts-jest": "^24.0.2",

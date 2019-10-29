@@ -6,7 +6,7 @@ import '@lion/button/lion-button';
 import '../src/bw-button';
 import { TemplateResult } from 'lit-html';
 
-storiesOf('Buttons|Button', module).add(
+storiesOf('Components|Button', module).add(
   'Bulma button',
   (): TemplateResult => html`
             <style>
