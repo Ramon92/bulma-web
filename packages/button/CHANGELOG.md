@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/Ramon92/bulma-web/compare/@bulma-web/button@0.4.0...@bulma-web/button@0.5.0) (2019-10-29)
+
+
+### Features
+
+* **bulma card:** add card and docs ([d051804](https://github.com/Ramon92/bulma-web/commit/d05180425204e9cff51b21a1346b19da990e2693))
+* **card:** update build and add card files ([f450af5](https://github.com/Ramon92/bulma-web/commit/f450af5b67f329f30d8328af0b4fda40aa276951))
+
+
+
+
+
 # [0.4.0](https://github.com/Ramon92/bulma-web/compare/@bulma-web/button@0.3.0...@bulma-web/button@0.4.0) (2019-09-30)
 
 
