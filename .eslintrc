@@ -7,7 +7,7 @@
     "prettier/@typescript-eslint",
     "eslint:recommended"
   ],
-    "parser": "@typescript-eslint/parser",
+  "parser": "@typescript-eslint/parser",
   "plugins": [
     "@typescript-eslint",
     "prettier"
@@ -21,7 +21,11 @@
     "import/resolver": {
       "node": {
         "extensions": [
-          ".js", ".jsx", ".ts", ".tsx", "css"
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx",
+          "css"
         ]
       }
     }
