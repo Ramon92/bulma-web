@@ -1,0 +1,45 @@
+{
+  "name": "@bulma-web/content",
+  "version": "0.0.1",
+  "description": "A content component to style the inner content automagically",
+  "keywords": [
+    "bulma",
+    "bulma-web",
+    "web-components",
+    "lit-html",
+    "lit-element",
+    "bw-content"
+  ],
+  "author": "Ramon Osenga <ramon.osenga@outlook.com>",
+  "homepage": "https://github.com/Ramon92/bulma-web/packages/content#readme",
+  "license": "MIT",
+  "main": "bw-content.js",
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramon92/bulma-web.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "yarn webpack --config webpack.config.js && yarn build:types",
+    "build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+  },
+  "bugs": {
+    "url": "https://github.com/Ramon92/bulma-web/issues"
+  },
+  "devDependencies": {
+    "bulma": "^0.8.0",
+    "webpack": "^4.41.2"
+  },
+  "dependencies": {
+    "lit-html": "^1.1.2"
+  }
+}

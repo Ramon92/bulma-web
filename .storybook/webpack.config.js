@@ -1,19 +1,14 @@
 const path = require('path');
-const defaultConfig = require('@open-wc/demoing-storybook/default-storybook-webpack-config.js');
+// const defaultConfig = require('@open-wc/demoing-storybook/default-storybook-webpack-config.js');
 
-module.exports = async ({ config, mode }) => {
-  const newConfig = defaultConfig({
-    config,
-    transpilePackages: ['lit-html', 'lit-element', '@open-wc', '@lion'],
-  });
-
-  newConfig.module.rules.push({
+module.exports = async ({config}) => {
+  config.module.rules.push({
     test: [/\.stories\.ts$/, /index\.ts/],
     loaders: [require.resolve('@storybook/addon-storysource/loader')],
     enforce: 'pre',
   });
 
-  newConfig.module.rules.push({
+  config.module.rules.push({
     test: /\.(ts|tsx)$/,
     loader: require.resolve('babel-loader'),
     options: {
@@ -31,20 +26,14 @@ module.exports = async ({ config, mode }) => {
           {
             loose: true,
           },
-        ],
-        [
-          'babel-plugin-inline-import',
-          {
-            extensions: ['.css'],
-          },
-        ],
+        ]
       ],
       presets: [
         [
           '@babel/typescript',
           {
             useBuiltIns: 'entry',
-            corejs: '2',
+            corejs: '3',
           },
         ],
       ],
@@ -52,7 +41,11 @@ module.exports = async ({ config, mode }) => {
     },
   });
 
-  newConfig.resolve.extensions.push('.ts', '.css', 'scss');
+  config.module.rules[3] = {
+        test: /\.css$/,
+        use : require.resolve('raw-loader'),
+      }
 
-  return newConfig;
+  config.resolve.extensions.push('.ts', '.css', 'scss');
+  return config;
 };

@@ -42,19 +42,13 @@ export class BwButton extends (LionButton as any) {
     return html`
       <div class="btn button ${classMap(classes)}" ?disabled=${this.disabled}>
         ${this._renderBefore()}
-        ${this.$$slot('icon-left') &&
-          html`
-            <span class="icon">
-              <slot name="icon-left"></slot>
-            </span>
-          `}
-        <span><slot></slot></span>
-        ${this.$$slot('icon-right') &&
-          html`
-            <span class="icon">
-              <slot name="icon-right"></slot>
-            </span>
-          `}
+        ${this.constructor.__isIE11()
+          ? html`
+              <div id="${this._buttonId}"><slot></slot></div>
+            `
+          : html`
+              <slot></slot>
+            `}
         ${this._renderAfter()}
         <slot name="_button"></slot>
         <div class="click-area"></div>
@@ -70,9 +64,5 @@ export class BwButton extends (LionButton as any) {
   /* eslint-disable-next-line class-methods-use-this */
   _renderAfter() {
     return html``;
-  }
-
-  $$slot(slot: string): HTMLElement {
-    return super.$$slot(slot);
   }
 }
