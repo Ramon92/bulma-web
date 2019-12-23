@@ -3,7 +3,7 @@ import { classMap } from 'lit-html/directives/class-map';
 import { LionButton } from '@lion/button';
 import buttonStyles from './button.css';
 
-export class BwButton extends (LionButton as any) {
+export class BwButton extends LionButton {
   @property({ type: String, reflect: true }) type: string;
 
   @property({ type: String, reflect: true }) size: string;

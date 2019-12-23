@@ -1,0 +1,131 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "bw-button",
+      "attributes": [
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "type": "string"
+        },
+        {
+          "name": "display",
+          "type": "string"
+        },
+        {
+          "name": "outlined",
+          "type": "boolean"
+        },
+        {
+          "name": "inverted",
+          "type": "boolean"
+        },
+        {
+          "name": "loading",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "rounded",
+          "type": "boolean"
+        }
+      ],
+      "properties": [
+        {
+          "name": "type",
+          "attribute": "type",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string"
+        },
+        {
+          "name": "display",
+          "attribute": "display",
+          "type": "string"
+        },
+        {
+          "name": "outlined",
+          "attribute": "outlined",
+          "type": "boolean"
+        },
+        {
+          "name": "inverted",
+          "attribute": "inverted",
+          "type": "boolean"
+        },
+        {
+          "name": "loading",
+          "attribute": "loading",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "type": "boolean"
+        },
+        {
+          "name": "rounded",
+          "attribute": "rounded",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "bw-card"
+    },
+    {
+      "name": "bw-content",
+      "attributes": [
+        {
+          "name": "is-small",
+          "description": "this will set font size small"
+        }
+      ],
+      "slots": [
+        {
+          "name": "slot",
+          "description": "content to be styled automagically"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--content-heading-color",
+          "description": "heading color for content",
+          "default": "\"default hsl(0, 0%, 21%) \""
+        }
+      ]
+    },
+    {
+      "name": "bw-content",
+      "attributes": [
+        {
+          "name": "is-small",
+          "description": "this will set font size small"
+        }
+      ],
+      "slots": [
+        {
+          "name": "slot",
+          "description": "content to be styled automagically"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--content-heading-color",
+          "description": "heading color for content",
+          "default": "\"default hsl(0, 0%, 21%) \""
+        }
+      ]
+    }
+  ]
+}

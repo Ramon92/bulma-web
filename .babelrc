@@ -12,6 +12,13 @@
     "@babel/preset-typescript"
   ],
   "plugins": [
+    "@babel/plugin-syntax-import-meta",
+    [
+      "babel-plugin-bundled-import-meta",
+      {
+        "importStyle": "baseURI"
+      }
+    ],
     [
       "@babel/plugin-proposal-decorators",
       {
