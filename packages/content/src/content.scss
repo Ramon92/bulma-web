@@ -24,7 +24,7 @@ $content-code-color: var(--content-code-color, #f14668);
 
 @import '../../../node_modules/bulma/sass/elements/content.sass';
 
-bw-content{
+bw-content {
   @extend .content;
   display: block;
   

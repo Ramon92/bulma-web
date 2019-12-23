@@ -38,6 +38,5 @@
     "@lion/button": "^0.3.11",
     "bulma": "^0.7.5",
     "lit-element": "^2.2.1",
-    "lit-html": "^1.1.2"
   }
 }

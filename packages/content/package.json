@@ -26,16 +26,18 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "yarn webpack --config webpack.config.js && yarn build:types",
-    "build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json"
+    "build": "yarn build:scss && yarn build:js && yarn build:types",
+    "build:js": "yarn babel src -d ./ --extensions \".ts\" --config-file ./.babelrc --source-maps inline",
+    "build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json",
+    "build:scss": "node-sass src -o src"
   },
   "bugs": {
     "url": "https://github.com/Ramon92/bulma-web/issues"
   },
   "devDependencies": {
-    "bulma": "^0.8.0"
   },
   "dependencies": {
-    "lit-element": "^2.2.1"
+    "lit-element": "^2.2.1",
+    "bulma": "^0.8.0"
   }
 }

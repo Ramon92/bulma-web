@@ -101,29 +101,15 @@
         {
           "name": "--content-heading-color",
           "description": "heading color for content",
-          "default": "\"default hsl(0, 0%, 21%) \""
-        }
-      ]
-    },
-    {
-      "name": "bw-content",
-      "attributes": [
+          "default": "\"hsl(0, 0%, 21%) \""
+        },
         {
-          "name": "is-small",
-          "description": "this will set font size small"
-        }
-      ],
-      "slots": [
+          "name": "--content-heading-weight",
+          "description": "font weight for heading"
+        },
         {
-          "name": "slot",
-          "description": "content to be styled automagically"
-        }
-      ],
-      "cssProperties": [
-        {
-          "name": "--content-heading-color",
-          "description": "heading color for content",
-          "default": "\"default hsl(0, 0%, 21%) \""
+          "name": "--content-heading-line-height",
+          "description": "heading font line height"
         }
       ]
     }

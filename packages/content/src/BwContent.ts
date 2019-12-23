@@ -3,11 +3,13 @@ import contentStyles from './content.css';
 
 /**
  *
- * @element bw-content
+ *
  * @attr is-small - this will set font size small
  * @slot slot - content to be styled automagically
  *
- * @cssprop [--content-heading-color=default hsl(0, 0%, 21%) ] - heading color for content
+ * @cssprop [--content-heading-color=hsl(0, 0%, 21%) ] - heading color for content
+ * @cssprop --content-heading-weight - font weight for heading
+ * @cssprop --content-heading-line-height - heading font line height
  *
  * @export
  * @class BwContent
