@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/Ramon92/bulma-web/compare/@bulma-web/button@0.5.0...@bulma-web/button@0.5.1) (2019-12-24)
+
+**Note:** Version bump only for package @bulma-web/button
+
+
+
+
+
 # [0.5.0](https://github.com/Ramon92/bulma-web/compare/@bulma-web/button@0.4.0...@bulma-web/button@0.5.0) (2019-10-29)
 
 
