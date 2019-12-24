@@ -1,0 +1,45 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "esmodules": true
+        },
+        "modules": false
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-import-meta",
+    [
+      "babel-plugin-bundled-import-meta",
+      {
+        "importStyle": "baseURI"
+      }
+    ],
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-proposal-object-rest-spread",
+    [
+      "babel-plugin-inline-import",
+      {
+        "extensions": [
+          ".css"
+        ]
+      }
+    ]
+  ]
+}
