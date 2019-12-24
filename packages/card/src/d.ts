@@ -1,3 +1,3 @@
-declare module '*.css' {
-  const content: string;
-}
+declare module '*.css';
+
+declare module "*.md";
