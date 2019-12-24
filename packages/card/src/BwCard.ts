@@ -26,9 +26,7 @@ export class BwCard extends LitElement {
           <slot name="content"></slot>
         </div>
         <footer class="card-footer">
-          <!-- <span class="card-footer-item"> -->
           <slot name="footer-item"></slot>
-          <!-- </span> -->
         </footer>
       </div>
     `;

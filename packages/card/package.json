@@ -12,6 +12,9 @@
   "author": "Ramon Osenga <ramon.osenga@outlook.com>",
   "homepage": "https://github.com/Ramon92/bulma-web#readme",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "bw-card.js",
   "directories": {
     "lib": "lib",
