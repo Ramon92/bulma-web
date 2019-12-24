@@ -3,7 +3,7 @@ import { classMap } from 'lit-html/directives/class-map';
 import { LionButton } from '@lion/button';
 import buttonStyles from './button.css';
 
-export class BwButton extends LionButton {
+export class BwButton extends (LionButton as any) {
   @property({ type: String, reflect: true }) type: string;
 
   @property({ type: String, reflect: true }) size: string;
@@ -19,6 +19,8 @@ export class BwButton extends LionButton {
   @property({ type: Boolean, reflect: true }) disabled: boolean;
 
   @property({ type: Boolean, reflect: true }) rounded: boolean;
+
+  _buttonId: string;
 
   static get styles(): any {
     return [
@@ -42,7 +44,7 @@ export class BwButton extends LionButton {
     return html`
       <div class="btn button ${classMap(classes)}" ?disabled=${this.disabled}>
         ${this._renderBefore()}
-        ${this.constructor.__isIE11()
+        ${LionButton.__isIE11()
           ? html`
               <div id="${this._buttonId}"><slot></slot></div>
             `
