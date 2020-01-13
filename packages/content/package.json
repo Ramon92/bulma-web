@@ -14,11 +14,12 @@
   "homepage": "https://github.com/Ramon92/bulma-web/packages/content#readme",
   "license": "MIT",
   "main": "bw-content.js",
+  "module": "bw-content.js",
   "publishConfig": {
     "access": "public"
   },
   "directories": {
-    "src": "src"
+    "lib": "src"
   },
   "files": [
     "lib"

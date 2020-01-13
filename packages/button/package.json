@@ -17,7 +17,7 @@
   "main": "bw-button.js",
   "module": "bw-button.js",
   "directories": {
-    "lib": "lib",
+    "lib": "src",
     "test": "__tests__"
   },
   "repository": {

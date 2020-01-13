@@ -16,13 +16,11 @@
     "access": "public"
   },
   "main": "bw-card.js",
+  "module": "bw-card.js",
   "directories": {
-    "lib": "lib",
+    "lib": "src",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ramon92/bulma-web.git"
