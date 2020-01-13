@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.4](https://github.com/Ramon92/bulma-web/compare/@bulma-web/content@0.0.3...@bulma-web/content@0.0.4) (2020-01-13)
+
+
+### Bug Fixes
+
+* **package info:** fix package settings ([39922af](https://github.com/Ramon92/bulma-web/commit/39922afc9d4cfbbb6b34c37abd5639651ca606cf))
+
+
+
+
+
 ## [0.0.3](https://github.com/Ramon92/bulma-web/compare/@bulma-web/content@0.0.2...@bulma-web/content@0.0.3) (2019-12-24)
 
 
