@@ -1,25 +1,25 @@
 {
-  "name": "@bulma-web/content",
-  "version": "0.0.4",
-  "description": "A content component to style the inner content automagically",
+  "name": "@bulma-web/media",
+  "version": "0.0.1",
+  "description": "The media object useful for social media interfaces, but useful in any context.",
   "keywords": [
-    "bulma",
+    "web-component",
+    "media",
     "bulma-web",
-    "web-components",
-    "lit-html",
+    "bw-media",
     "lit-element",
-    "bw-content"
+    "lit-html"
   ],
   "author": "bulma-web",
-  "homepage": "https://github.com/Ramon92/bulma-web/packages/content#readme",
+  "homepage": "https://bulma-web.netlify.com",
   "license": "MIT",
-  "main": "bw-content.js",
-  "module": "bw-content.js",
-  "publishConfig": {
-    "access": "public"
-  },
+  "main": "bw-media.js",
   "directories": {
-    "lib": "src"
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
   },
   "repository": {
     "type": "git",
@@ -39,7 +39,7 @@
     "url": "https://github.com/Ramon92/bulma-web/issues"
   },
   "dependencies": {
-    "bulma": "^0.7.5",
+    "@bulma-web/content": "^0.0.4",
     "lit-element": "^2.2.1"
   }
 }

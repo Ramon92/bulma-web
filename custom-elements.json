@@ -112,6 +112,15 @@
           "description": "heading font line height"
         }
       ]
+    },
+    {
+      "name": "bw-media",
+      "slots": [
+        {
+          "name": "media-left",
+          "description": "media to be aligned on the left side of the bw-media element"
+        }
+      ]
     }
   ]
 }
