@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/Ramon92/bulma-web/compare/@bulma-web/media@0.1.0...@bulma-web/media@0.1.1) (2020-01-20)
+
+**Note:** Version bump only for package @bulma-web/media
+
+
+
+
+
 # 0.1.0 (2020-01-20)
 
 
