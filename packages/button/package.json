@@ -8,7 +8,7 @@
     "bulma-web",
     "bulma"
   ],
-  "author": "Ramon Osenga <ramon.osenga@gmail.com>",
+  "author": "bulma-web",
   "homepage": "https://github.com/Ramon92/bulma-web#readme",
   "license": "MIT",
   "publishConfig": {

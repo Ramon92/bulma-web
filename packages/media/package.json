@@ -14,12 +14,13 @@
   "homepage": "https://bulma-web.netlify.com",
   "license": "MIT",
   "main": "bw-media.js",
+  "module": "bw-media.js",
   "directories": {
     "lib": "src",
     "test": "__tests__"
   },
   "publishConfig": {
-    "registry": "https://registry.yarnpkg.com"
+    "access": "public"
   },
   "repository": {
     "type": "git",
