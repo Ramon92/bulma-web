@@ -10,7 +10,7 @@
     "lit-element",
     "bw-content"
   ],
-  "author": "Ramon Osenga <ramon.osenga@outlook.com>",
+  "author": "bulma-web",
   "homepage": "https://github.com/Ramon92/bulma-web/packages/content#readme",
   "license": "MIT",
   "main": "bw-content.js",
@@ -21,9 +21,6 @@
   "directories": {
     "lib": "src"
   },
-  "files": [
-    "lib"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Ramon92/bulma-web.git"

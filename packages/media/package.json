@@ -1,24 +1,26 @@
 {
-  "name": "@bulma-web/button",
-  "version": "0.5.2",
-  "description": "A bulma.io based web-component button",
+  "name": "@bulma-web/media",
+  "version": "0.0.1",
+  "description": "The media object useful for social media interfaces, but useful in any context.",
   "keywords": [
-    "web-components",
-    "button",
+    "web-component",
+    "media",
     "bulma-web",
-    "bulma"
+    "bw-media",
+    "lit-element",
+    "lit-html"
   ],
   "author": "bulma-web",
-  "homepage": "https://github.com/Ramon92/bulma-web#readme",
+  "homepage": "https://bulma-web.netlify.com",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
-  "main": "bw-button.js",
-  "module": "bw-button.js",
+  "main": "bw-media.js",
+  "module": "bw-media.js",
   "directories": {
     "lib": "src",
     "test": "__tests__"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -27,7 +29,7 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "yarn build:scss && yarn build:js && yarn build:types",
-    "build:js": "yarn babel src -d ./ --extensions \".ts\" --config-file ./.babelrc --source-maps inline",
+    "build:js": "babel src -d ./ --extensions \".ts\" --config-file ./.babelrc --source-maps inline",
     "build:storybook": "yarn build:scss && yarn build:storybook:src && yarn build:storybook:stories",
     "build:storybook:src": "babel src -d src --extensions \".ts\" --config-file ./.babelrc --source-maps inline",
     "build:storybook:stories": "babel stories -d stories --extensions \".ts\" --config-file ./.babelrc --source-maps inline",
@@ -38,9 +40,7 @@
     "url": "https://github.com/Ramon92/bulma-web/issues"
   },
   "dependencies": {
-    "@lion/button": "^0.3.11",
-    "bulma": "^0.7.5",
-    "lit-element": "^2.2.1",
-    "lit-html": "^1.1.2"
+    "@bulma-web/content": "^0.0.4",
+    "lit-element": "^2.2.1"
   }
 }

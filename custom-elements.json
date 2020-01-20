@@ -112,6 +112,50 @@
           "description": "heading font line height"
         }
       ]
+    },
+    {
+      "name": "bw-media",
+      "description": "The famous media object prevalent in social media interfaces, but useful in any context",
+      "slots": [
+        {
+          "name": "media-left",
+          "description": "element to be aligned on the left side of the bw-media element"
+        },
+        {
+          "name": "media-content",
+          "description": "Content for the media eg. a paragraph"
+        },
+        {
+          "name": "media-nested",
+          "description": "To be used to nest multiple media components"
+        },
+        {
+          "name": "media-right",
+          "description": "small element to be aligned on the right such as a close icon button"
+        }
+      ]
+    },
+    {
+      "name": "bw-media",
+      "description": "The famous media object prevalent in social media interfaces, but useful in any context",
+      "slots": [
+        {
+          "name": "media-left",
+          "description": "element to be aligned on the left side of the bw-media element"
+        },
+        {
+          "name": "media-content",
+          "description": "Content for the media eg. a paragraph"
+        },
+        {
+          "name": "media-nested",
+          "description": "To be used to nest multiple media components"
+        },
+        {
+          "name": "media-right",
+          "description": "small element to be aligned on the right such as a close icon button"
+        }
+      ]
     }
   ]
 }
