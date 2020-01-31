@@ -1,0 +1,45 @@
+{
+  "name": "@bulma-web/collapse",
+  "version": "0.0.1",
+  "description": "bw-Collapse",
+  "keywords": [
+    "bw-collapse",
+    "web-component",
+    "bulma-web",
+    "@bulma-web/collapse",
+    "bulma",
+    "lit-element"
+  ],
+  "author": "bulma-web",
+  "homepage": "https://bulma-web.netlify.com",
+  "license": "MIT",
+  "main": "bw-collapse.js",
+  "module": "bw-collapse.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "directories": {
+    "lib": "src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramon92/bulma-web.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "yarn build:scss && yarn build:js && yarn build:types",
+    "build:js": "babel src -d ./ --extensions \".ts\" --config-file ./.babelrc --source-maps inline",
+    "build:storybook": "yarn build:scss && yarn build:storybook:src && yarn build:storybook:stories",
+    "build:storybook:src": "babel src -d src --extensions \".ts\" --config-file ./.babelrc --source-maps inline",
+    "build:storybook:stories": "babel stories -d stories --extensions \".ts\" --config-file ./.babelrc --source-maps inline",
+    "build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json",
+    "build:scss": "node-sass src -o src"
+  },
+  "bugs": {
+    "url": "https://github.com/Ramon92/bulma-web/issues"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.1",
+    "lit-html": "^1.1.2"
+  }
+}

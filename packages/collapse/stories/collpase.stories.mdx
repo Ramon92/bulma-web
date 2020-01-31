@@ -1,0 +1,131 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+import '../src/bw-collapse.ts';
+import '@bulma-web/button/src/bw-button';
+import bulmaStyles from 'bulma/css/bulma.css';
+import '@fortawesome/fontawesome-free/js/all';
+
+export const loadStory = () => {
+  document.dispatchEvent(new CustomEvent('story-loaded', {
+    bubbles: true,
+    composed: true,
+  }))
+}
+
+<Meta title="Components|Collapse" parameters={{ component: 'bw-collapse' }} />
+
+## Demo Bulma-Web Collapse web-Components
+
+Collapse is a easy way to toggle what you want
+
+<Preview>
+  <Story name="simple notification">
+    {() => {
+      loadStory()
+      return html`
+      <div class="preview">
+        <style>
+          ${bulmaStyles}
+        </style>
+        <bw-collapse>
+          <bw-button type="is-primary" slot="collapse-trigger">Click me!</bw-button>
+          <div slot="collapse-content" class="notification">
+            <div class="content">
+              <h3>
+                Subtitle
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec
+                rutrum justo nibh eu lectus. <br />
+                Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis
+                neque.
+              </p>
+            </div>
+          </div>
+        </bw-collapse>
+      </div>
+    `}}
+  </Story>
+</Preview>
+
+<Props of="bw-collapse" />
+
+### # Panel
+<Preview>
+  <Story name="Panel">
+    {() => {
+      loadStory()
+      return html`
+      <div class="preview">
+        <style>
+          ${bulmaStyles}
+        </style>
+        <bw-collapse class="panel">
+          <div
+            slot="collapse-trigger"
+            class="panel-heading"
+            role="button"
+            aria-controls="contentIdForA11y2"
+          >
+            <strong>Title</strong>
+          </div>
+          <div slot="collapse-content">
+            <p class="panel-tabs">
+              <a class="is-active">All</a>
+              <a>Public</a>
+              <a>Private</a>
+            </p>
+            <div class="panel-block">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+              Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec rutrum
+              justo nibh eu lectus. <br />
+              Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis
+              neque.
+            </div>
+          </div>
+        </bw-collapse>
+      </div>
+    `}}
+  </Story>
+</Preview>
+
+### # Card
+<Preview>
+  <Story name="Card">
+    {html`
+      <div class="preview">
+        <style>
+          ${bulmaStyles}
+        </style>
+        <bw-collapse class="card">
+          <div
+            slot="collapse-trigger"
+            class="card-header"
+            role="button"
+            aria-controls="contentIdForA11y3">
+            <p class="card-header-title">
+              Component
+            </p>
+            <a class="card-header-icon">
+            </a>
+          </div>
+          <div slot="collapse-content">
+            <div class="card-content">
+              <div class="content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis
+                mauris.
+                <a>#buefy</a>.
+              </div>
+            </div>
+            <footer class="card-footer">
+              <a class="card-footer-item">Save</a>
+              <a class="card-footer-item">Edit</a>
+              <a class="card-footer-item">Delete</a>
+            </footer>
+          </div>
+        </bw-collapse>
+      </div>
+    `}
+  </Story>
+</Preview>
+
