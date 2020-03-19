@@ -84,6 +84,24 @@
       "name": "bw-card"
     },
     {
+      "name": "bw-collapse",
+      "attributes": [
+        {
+          "name": "open",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "open",
+          "attribute": "open",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
       "name": "bw-content",
       "attributes": [
         {
