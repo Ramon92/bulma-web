@@ -19,6 +19,11 @@ const collapseStyles = css`
   }
 `;
 
+/**
+ *
+ * @class BwCollapse
+ * @extends {LitElement}
+ */
 export class BwCollapse extends LitElement {
   @property({
     type: Boolean,
