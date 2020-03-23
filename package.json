@@ -7,7 +7,7 @@
   ],
   "scripts": {
     "start": "run-p storybook watch:scss",
-    "watch:scss": "node-sass -rw ./packages/ -o ./packages/",
+    "watch:scss": "node-sass -rw ./packages/*/src -o ./packages/*/src",
     "build:scss": "node-sass -r ./packages/ -o ./packages/",
     "site:build": "yarn storybook:build",
     "storybook": "start-storybook --stories './packages/**/stories/*.stories.{ts,mdx}' --config ./es-dev-server.config.js --open",
@@ -25,7 +25,8 @@
     "@bulma-web/card": "yarn workspace @bulma-web/card",
     "@bulma-web/content": "yarn workspace @bulma-web/content",
     "@bulma-web/media": "yarn workspace @bulma-web/media",
-    "@bulma-web/collapse": "yarn workspace @bulma-web/collapse"
+    "@bulma-web/collapse": "yarn workspace @bulma-web/collapse",
+    "@bulma-web/styles": "yarn workspace @bulma-web/styles"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
