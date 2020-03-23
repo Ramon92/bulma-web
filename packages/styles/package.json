@@ -1,0 +1,43 @@
+{
+  "name": "@bulma-web/styles",
+  "version": "0.0.1",
+  "description": "Bulma web styles which wraps bulma styles to make it customizable with custom properties",
+  "keywords": [
+    "bulma-web",
+    "bw-styles",
+    "web-component",
+    "styles",
+    "bulma"
+  ],
+  "author": "Ramon Osenga <ramon.osenga@gmail.com>",
+  "homepage": "https://bulma-web.netlify.com",
+  "license": "MIT",
+  "main": "lib/styles.js",
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramon92/bulma-web.git"
+  },
+  "scripts": {
+    "build": "yarn build-clean && yarn build-sass && yarn build-autoprefix && yarn build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/bulma.css css/bulma.css",
+    "build-cleancss": "cleancss -o css/bw-styles.min.css css/bw-styles.css",
+    "build-clean": "rimraf css",
+    "build-sass": "node-sass --output-style expanded --source-map true bw-styles.scss css/bw-styles.css",
+    "deploy": "yarn build",
+    "start": "yarn build-sass --watch"
+  },
+  "bugs": {
+    "url": "https://github.com/Ramon92/bulma-web/issues"
+  },
+  "dependencies": {
+    "bulma": "^0.8.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "clean-css": "^4.2.3",
+    "postcss": "^7.0.27"
+  }
+}

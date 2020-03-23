@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "bw-styles.css",
+	"sources": [
+		"../scss/utilities/initial-variables.scss"
+	],
+	"names": [],
+	"mappings": ""
+}

@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@import '../../node_modules/bulma/sass/base/minireset.sass';
+$body-background-color: var(--body-background-color, $scheme-main);
+$body-size: var(--body-size, 16px);
+$body-min-width: var(--body-min-width, 300px);
+$body-rendering: var(--body-rendering, optimizeLegibility);
+$body-family: var (--body-family, $family-primary);
+$body-overflow-x: var(--body-overflow-x, hidden);
+$body-overflow-y: var(--body-overflow-y, scroll);
+
+$body-color: var(--body-color, $text);
+$body-font-size: var(--body-font-size, 1em);
+$body-weight: var(--body-weight, $weight-normal);
+$body-line-height: var(--body-line-height, 1.5);
+
+$code-family: var(--code-family, $family-code);
+$code-padding: var(--code-padding, 0.25em 0.5em 0.25em);
+$code-weight: var(--code-weight, normal);
+$code-size: var(--code-size, 0.875em);
+
+$small-font-size: var(--small-font-size, 0.875em);
+
+$hr-background-color: var(--hr-background-color, $background);
+$hr-height: var(--hr-height, 2px);
+$hr-margin: var(--hr-margin, 1.5rem 0);
+
+$strong-color: var(--strong-color, text-strong);
+$strong-weight: var(--strong-weight, $weight-bold);
+
+$pre-font-size: var(--pre-font-size, 0.875em);
+$pre-padding: var(--pre-padding, 1.25rem 1.5rem);
+$pre-code-font-size: var(--pre-code-font-size, 1em);
+
+@import '../../node_modules/bulma/sass/base/generic.sass';
+@import '../../node_modules/bulma/sass/base/helpers.sass';

@@ -1,0 +1,92 @@
+// Colors
+
+$black: var(--black, hsl(0, 0%, 4%));
+$black-bis: var(--black-bis, hsl(0, 0%, 7%));
+$black-ter: var(--black-ter, hsl(0, 0%, 14%));
+
+$grey-darker: var(--grey-darker, hsl(0, 0%, 21%));
+$grey-dark: var(--grey-dark, hsl(0, 0%, 29%));
+$grey: var(--grey, hsl(0, 0%, 48%));
+$grey-light: var(--grey-light, hsl(0, 0%, 71%));
+$grey-lighter: var(--grey-lighter, hsl(0, 0%, 86%));
+$grey-lightest: var(--grey-lightest, hsl(0, 0%, 93%));
+
+$white-ter: var(--white-ter, hsl(0, 0%, 96%));
+$white-bis: var(--white-bis, hsl(0, 0%, 98%));
+$white: var(--white, hsl(0, 0%, 100%));
+
+$orange: var(--orange, hsl(14, 100%, 53%));
+$yellow: var(--yellow, hsl(48, 100%, 67%));
+$green: var(--green, hsl(141, 53%, 53%));
+$turquoise: var(--turquoise, hsl(171, 100%, 41%));
+$cyan: var(--cyan, hsl(204, 71%, 53%));
+$blue: var(--blue, hsl(217, 71%, 53%));
+$purple: var(--purple, hsl(271, 100%, 71%));
+$red: var(--red, hsl(348, 86%, 61%));
+
+// Typography
+
+$family-sans-serif: var(
+  --family-sans-serif,
+  BlinkMacSystemFont,
+  -apple-system,
+  'Segoe UI',
+  'Roboto',
+  'Oxygen',
+  'Ubuntu',
+  'Cantarell',
+  'Fira Sans',
+  'Droid Sans',
+  'Helvetica Neue',
+  'Helvetica',
+  'Arial',
+  sans-serif
+);
+$family-monospace: var(--family-monospace, monospace);
+$render-mode: var(--render-mode, optimizeLegibility);
+
+$size-1: var(--size-1, 3rem);
+$size-2: var(--size-2, 2.5rem);
+$size-3: var(--size-3, 2rem);
+$size-4: var(--size-4, 1.5rem);
+$size-5: var(--size-5, 1.25rem);
+$size-6: var(--size-6, 1rem);
+$size-7: var(--size-7, 0.75rem);
+
+$weight-light: var(--weight-light, 300);
+$weight-normal: var(--weight-normal, 400);
+$weight-medium: var(--weight--medium, 500);
+$weight-semibold: var(--weight-semibold, 600);
+$weight-bold: var(--weight-bold, 700);
+
+// Spacing
+
+$block-spacing: var(--block-spacing, 1.5rem);
+
+// Responsiveness
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: var(--gap, 32px);
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: var(--tablet, 769px);
+// 960px container + 4rem
+$desktop: var(--desktop, calc(960px + (2 * $gap)));
+// 1152px container + 4rem
+$widescreen: var(--widescreen, calc(1152px + (2 * $gap)));
+$widescreen-enabled: var(--widescreen-enabled, true);
+// 1344px container + 4rem
+$fullhd: var(--fullhd, calc(1344px + (2 * $gap)));
+$fullhd-enabled: var(--fullhd-enabled, true);
+
+// Miscellaneous
+
+$easing: var(--easing, ease-out);
+$radius-small: var(--radius-small, 2px);
+$radius: var(--radius, 4px);
+$radius-large: var(--radius-large, 6px);
+$radius-rounded: var(--radius-rounded, 290486px);
+$speed: var(--speed, 86ms);
+
+// Flags
+
+$variable-columns: var(--variable-columns, true);
