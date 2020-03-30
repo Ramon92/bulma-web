@@ -8,8 +8,7 @@
         },
         "modules": false
       }
-    ],
-    "@babel/preset-typescript"
+    ]
   ],
   "plugins": [
     "@babel/plugin-syntax-import-meta",
@@ -36,9 +35,7 @@
     [
       "babel-plugin-inline-import",
       {
-        "extensions": [
-          ".css"
-        ]
+        "extensions": [".css"]
       }
     ]
   ]

@@ -1,19 +1,16 @@
-import { Story, Preview, Meta, Props } from '@open-wc/demoing-storybook';
-import { html } from 'lit-element';
-import '../src/bw-media';
-import '@bulma-web/content/src/bw-content';
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
 import '@bulma-web/button/src/bw-button';
 
-<Meta title="Layout|Media" />
+<Meta title="Layout|Media" parameters={{ component: 'bw-media' }} />
 
 ## Demo Bulma Media web-component
 
 The media object is a UI element perfect for repeatable and nestable content.
 
-
 <Preview withToolbar>
   <Story name="simple" height="200px">
-    {html`
+    {() => { 
+      return html`
       <bw-media>
         <figure slot="media-left">
           <img src="https://bulma.io/images/placeholders/128x128.png" />
@@ -31,7 +28,8 @@ The media object is a UI element perfect for repeatable and nestable content.
           <bw-button>Right</bw-button>
         </bw-content>
       </bw-media>
-    `}
+    `;
+    }}
   </Story>
 </Preview>
 
@@ -42,7 +40,8 @@ You can nest media objects up to 3 levels deep.
 
 <Preview>
   <Story name="nesting">
-    {html`
+    {() => { 
+      return html`
     <style>
       a {
         color: #3273dc;
@@ -133,6 +132,6 @@ You can nest media objects up to 3 levels deep.
           </div>
       </bw-media>
     </div>
-    `}
+    `;}}
   </Story>
 </Preview>

@@ -1,0 +1,159 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+import '../src/bw-message';
+
+<Meta title="Components|Message" parameters={{ component: 'bw-message' }} />
+
+## Demo Bulma-Web message web-component
+
+<Preview>
+  <Story name="simple message">
+    {() => {
+      return html`
+        <div style="max-width:600px">
+          <bw-message active closeable>
+            <span slot="message-header">Hello World</span>
+            Lorem ipsum dolor sit amet, consecteturadipiscing elit.
+            <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec nulla.
+            Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
+            <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus.
+            Donec sodales, arcu et sollicitudin porttitor, tortor urna tempor ligula, id porttitor
+            mi magna a neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+          </bw-message>
+        </div>
+      `;
+    }}
+  </Story>
+</Preview>
+
+#### Props for bw-message
+
+<Props of="bw-message" />
+
+### # Colors
+
+The message component is available in all the different colors based on type
+
+<Preview>
+  <Story name="color messages">
+    {() => {
+      return html`
+        <div style="max-width:500px">
+          <bw-message active closeable type="dark">
+            <span slot="message-header">Dark</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-primary">
+            <span slot="message-header">Primary</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-link">
+            <span slot="message-header">Link</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-info">
+            <span slot="message-header">Info</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-success">
+            <span slot="message-header">Success</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-warning">
+            <span slot="message-header">Warning</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-danger">
+            <span slot="message-header">Danger</span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+      `;
+    }}
+  </Story>
+</Preview>
+
+### # Message body only
+
+You can remove the `message-header` if you don't need it, which will add a left border to the `message-body`:
+
+<Preview>
+  <Story name="body messages">
+    {() => {
+      return html`
+        <div style="max-width:500px">
+          <bw-message active closeable type="dark">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-primary">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-link">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-info">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-success">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-warning">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+        <br />
+        <div style="max-width:500px">
+          <bw-message active closeable type="is-danger">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce id fermentum quam. Proin
+            sagittis, nibh id hendrerit imperdiet, elit sapien laoreet elit
+          </bw-message>
+        </div>
+      `;
+    }}
+  </Story>
+</Preview>
