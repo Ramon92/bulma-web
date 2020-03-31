@@ -29,8 +29,7 @@
     "build:js": "babel src -d ./ --config-file ./.babelrc --source-maps inline",
     "build:storybook": "yarn build:scss && yarn build:storybook:src && yarn build:storybook:stories",
     "build:storybook:src": "babel src -d src --config-file ./.babelrc --source-maps inline",
-    "build:storybook:stories": "babel stories -d stories --config-file ./.babelrc --source-maps inline",
-    "build:scss": "node-sass src -o src"
+    "build:storybook:stories": "babel stories -d stories --config-file ./.babelrc --source-maps inline"
   },
   "bugs": {
     "url": "https://github.com/Ramon92/bulma-web/issues"
