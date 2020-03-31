@@ -25,12 +25,11 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "build": "yarn build:scss && yarn build:js && yarn build:types",
+    "build": "yarn build:scss && yarn build:js ",
     "build:js": "babel src -d ./ --config-file ./.babelrc --source-maps inline",
     "build:storybook": "yarn build:scss && yarn build:storybook:src && yarn build:storybook:stories",
     "build:storybook:src": "babel src -d src --config-file ./.babelrc --source-maps inline",
     "build:storybook:stories": "babel stories -d stories --config-file ./.babelrc --source-maps inline",
-    "build:types": "tsc --emitDeclarationOnly -p tsconfig.build.json",
     "build:scss": "node-sass src -o src"
   },
   "bugs": {
