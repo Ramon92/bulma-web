@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { html } from 'lit-element';
+import { html } from '@open-wc/demoing-storybook';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
 import '@fortawesome/fontawesome-free/js/all';

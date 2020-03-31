@@ -1,4 +1,5 @@
-import { html, TemplateResult, css } from 'lit-element';
+import { css } from 'lit-element';
+import { html } from '@open-wc/demoing-storybook';
 // eslint-disable-next-line import/no-extraneous-dependencies
 
 import '../src/bw-content';

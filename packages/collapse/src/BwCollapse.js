@@ -1,5 +1,5 @@
 import { classMap } from 'lit-html/directives/class-map';
-import { LitElement, html, property, css } from 'lit-element';
+import { LitElement, html, css } from 'lit-element';
 
 const collapseStyles = css`
   :host {
@@ -25,19 +25,26 @@ const collapseStyles = css`
  * @extends {LitElement}
  */
 export class BwCollapse extends LitElement {
-  @property({
-    type: Boolean,
-    reflect: true,
-    attribute: true,
-  })
-  open = false;
+  static get properties() {
+    return {
+      open: {
+        type: Boolean,
+        reflect: true,
+      },
+    };
+  }
 
-  handleTrigger(): void {
+  constructor() {
+    super();
+    this.open = false;
+  }
+
+  handleTrigger() {
     this.open = !this.open;
     this.requestUpdate();
   }
 
-  async toggleCollapse(element: HTMLElement) {
+  async toggleCollapse(element) {
     await this.updated;
     if (this.open) {
       element.setAttribute('style', `height: ${element.scrollHeight}px`);
@@ -47,7 +54,7 @@ export class BwCollapse extends LitElement {
   }
 
   render() {
-    const contentElem: HTMLElement = this.querySelector('[slot="collapse-content"]');
+    const contentElem = this.querySelector('[slot="collapse-content"]');
     this.toggleCollapse(contentElem);
     return html`
       <style>

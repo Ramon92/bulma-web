@@ -3,42 +3,39 @@ module.exports = {
   watch: true,
   babel: true,
   nodeResolve: true,
-  fileExtensions: ['.ts', '.mdx', '.js', '.css'],
+  fileExtensions: ['.mdx', '.js', '.css'],
   rootDir: './',
   babelConfig: {
-    "presets": [
+    presets: [
       [
-        "@babel/preset-env",
+        '@babel/preset-env',
         {
-          "targets": {
-            "esmodules": true
+          targets: {
+            esmodules: true,
           },
-          "modules": false
-        }
+          modules: false,
+        },
       ],
-      "@babel/preset-typescript"
     ],
-    "plugins": [
+    plugins: [
       [
-        "@babel/plugin-proposal-decorators",
+        '@babel/plugin-proposal-decorators',
         {
-          "legacy": true
-        }
+          legacy: true,
+        },
       ],
       [
-        "@babel/plugin-proposal-class-properties",
+        '@babel/plugin-proposal-class-properties',
         {
-          "loose": true
-        }
+          loose: true,
+        },
       ],
       [
-        "babel-plugin-inline-import",
+        'babel-plugin-inline-import',
         {
-          "extensions": [
-            ".css"
-          ]
-        }
-      ]
-    ]
+          extensions: ['.css'],
+        },
+      ],
+    ],
   },
-}
+};

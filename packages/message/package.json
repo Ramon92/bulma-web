@@ -1,25 +1,23 @@
 {
-  "name": "@bulma-web/content",
-  "version": "0.1.0",
-  "description": "A content component to style the inner content automagically",
+  "name": "@bulma-web/message",
+  "version": "0.0.1",
+  "description": "A bulma message web component",
   "keywords": [
+    "bw-message",
+    "web-component",
     "bulma",
-    "bulma-web",
-    "web-components",
-    "lit-html",
-    "lit-element",
-    "bw-content"
+    "@bulma-web/message"
   ],
   "author": "bulma-web",
-  "homepage": "https://github.com/Ramon92/bulma-web/packages/content#readme",
+  "homepage": "https://bulma-web.netlify.com",
   "license": "MIT",
-  "main": "bw-content.js",
-  "module": "bw-content.js",
-  "publishConfig": {
-    "access": "public"
-  },
+  "main": "bw-message.js",
   "directories": {
-    "lib": "src"
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "publishConfig": {
+    "registry": "https://registry.yarnpkg.com"
   },
   "repository": {
     "type": "git",
@@ -32,13 +30,15 @@
     "build:storybook": "yarn build:scss && yarn build:storybook:src && yarn build:storybook:stories",
     "build:storybook:src": "babel src -d src --config-file ./.babelrc --source-maps inline",
     "build:storybook:stories": "babel stories -d stories --config-file ./.babelrc --source-maps inline",
-    "build:scss": "node-sass src -o src"
+    "build:scss": "echo \"No scss\""
   },
   "bugs": {
     "url": "https://github.com/Ramon92/bulma-web/issues"
   },
   "dependencies": {
-    "bulma": "^0.7.5",
-    "lit-element": "^2.2.1"
+    "@bulma-web/styles": "^0.0.1",
+    "haunted": "^4.7.0",
+    "lit-element": "^2.3.1",
+    "lit-html": "^1.2.1"
   }
 }

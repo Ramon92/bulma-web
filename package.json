@@ -10,8 +10,8 @@
     "watch:scss": "node-sass -rw ./packages/ -o ./packages/",
     "build:scss": "node-sass -r ./packages/ -o ./packages/",
     "site:build": "yarn storybook:build",
-    "storybook": "start-storybook --stories './packages/**/stories/*.stories.{ts,mdx}' --config ./es-dev-server.config.js --open",
-    "storybook:build": "wca analyze packages/**/src/*.ts --outFile custom-elements.json && yarn build:storybook && build-storybook --stories './packages/**/stories/*.stories.{js,mdx}' -o _site",
+    "storybook": "start-storybook --stories './packages/**/stories/*.stories.{js,mdx}' --config ./es-dev-server.config.js --open",
+    "storybook:build": "wca analyze packages/**/src/*.js --outFile custom-elements.json && yarn build:storybook && build-storybook --stories './packages/**/stories/*.stories.{js,mdx}' -o _site",
     "lint:eslint": "eslint --ext .ts,.js,.html .",
     "format:eslint": "eslint --ext .ts,.js,.html . --fix",
     "lint:prettier": "prettier \"**/*.{js,ts}\" --list-different || (echo '↑↑ these files are not prettier formatted ↑↑' && exit 1)",
@@ -25,7 +25,9 @@
     "@bulma-web/card": "yarn workspace @bulma-web/card",
     "@bulma-web/content": "yarn workspace @bulma-web/content",
     "@bulma-web/media": "yarn workspace @bulma-web/media",
-    "@bulma-web/collapse": "yarn workspace @bulma-web/collapse"
+    "@bulma-web/collapse": "yarn workspace @bulma-web/collapse",
+    "@bulma-web/message": "yarn workspace @bulma-web/message",
+    "@bulma-web/styles": "yarn workspace @bulma-web/styles"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",

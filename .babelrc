@@ -4,12 +4,16 @@
       "@babel/preset-env",
       {
         "targets": {
-          "esmodules": true
-        },
-        "modules": false
+          "esmodules": true,
+          "browsers": [
+            "last 2 Chrome versions",
+            "last 2 Firefox versions",
+            "last 2 Edge versions",
+            "last 2 Safari versions"
+          ]
+        }
       }
-    ],
-    "@babel/preset-typescript"
+    ]
   ],
   "plugins": [
     "@babel/plugin-syntax-import-meta",
@@ -36,9 +40,7 @@
     [
       "babel-plugin-inline-import",
       {
-        "extensions": [
-          ".css"
-        ]
+        "extensions": [".css"]
       }
     ]
   ]

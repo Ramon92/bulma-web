@@ -1,0 +1,42 @@
+{
+  "name": "@bulma-web/styles",
+  "version": "0.0.1",
+  "description": "A wrapper of bulma styles to make use of constructable stylesheets",
+  "keywords": [
+    "bulma",
+    "bulma-web",
+    "css",
+    "styling"
+  ],
+  "author": "bulma-web",
+  "homepage": "https://bulma-web.netlify.com",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "bw-styles.js",
+  "module": "bw-styles.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramon92/bulma-web.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "yarn build:js",
+    "build:js": "yarn babel src -d ./ --config-file ./.babelrc --source-maps inline",
+    "build:storybook": "yarn build:storybook:src && yarn build:storybook:stories",
+    "build:storybook:src": "babel src -d src --config-file ./.babelrc --source-maps inline",
+    "build:storybook:stories": "babel stories -d stories --extensions --config-file ./.babelrc --source-maps inline"
+  },
+  "bugs": {
+    "url": "https://github.com/Ramon92/bulma-web/issues"
+  },
+  "dependencies": {
+    "bulma": "^0.8.1",
+    "lit-element": "^2.3.1"
+  }
+}

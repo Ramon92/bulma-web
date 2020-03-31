@@ -2,7 +2,7 @@ const path = require('path');
 const createCompiler = require('@storybook/addon-docs/mdx-compiler-plugin');
 // const defaultConfig = require('@open-wc/demoing-storybook/default-storybook-webpack-config.js');
 
-module.exports = async ({config}) => {
+module.exports = async ({ config }) => {
   config.module.rules.push({
     test: [/\.stories\.ts$/, /index\.ts/],
     loaders: [require.resolve('@storybook/addon-storysource/loader')],
@@ -28,14 +28,16 @@ module.exports = async ({config}) => {
           {
             loose: true,
           },
-        ]
+        ],
       ],
       presets: [
         [
-          '@babel/typescript',
+          '@babel/preset-env',
           {
-            useBuiltIns: 'entry',
-            corejs: '3',
+            targets: {
+              esmodules: true,
+            },
+            modules: false,
           },
         ],
       ],
@@ -44,11 +46,11 @@ module.exports = async ({config}) => {
   });
 
   config.module.rules[3] = {
-        test: /\.css$/,
-        use : require.resolve('raw-loader'),
-      }
+    test: /\.css$/,
+    use: require.resolve('raw-loader'),
+  };
 
-  config.resolve.extensions.push('.ts', '.css', 'scss');
+  config.resolve.extensions.push('.js', '.css', 'scss');
 
   config.module.rules.push({
     test: /\.(stories|story)\.mdx$/,
@@ -77,6 +79,5 @@ module.exports = async ({config}) => {
   //   }
   // ]);
 
-  
   return config;
 };

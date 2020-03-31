@@ -22,7 +22,7 @@ export class BwContent extends LitElement {
 
   async connectedCallback() {
     super.connectedCallback();
-    const lightDom: any = this.cloneNode(true);
+    const lightDom = this.cloneNode(true);
     await this.updateComplete;
 
     [...lightDom.children].forEach(elem => this.appendChild(elem));

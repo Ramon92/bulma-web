@@ -1,28 +1,23 @@
-import { html, unsafeCSS, css, property } from 'lit-element';
+import { html, unsafeCSS, css } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
 import { LionButton } from '@lion/button';
 import buttonStyles from './button.css';
 
-export class BwButton extends (LionButton as any) {
-  @property({ type: String, reflect: true }) type: string;
+export class BwButton extends LionButton {
+  static get properties (){
+    return {
+      type: { type: String, reflect: true },
+      size: { type: String, reflect: true },
+      display: { type: String, reflect: true },
+      outlined: { type: Boolean, reflect: true },
+      inverted: { type: Boolean, reflect: true },
+      loading: { type: Boolean, reflect: true },
+      disabled: { type: Boolean, reflect: true },
+      rounded: { type: Boolean, reflect: true },
+    }
+  }
 
-  @property({ type: String, reflect: true }) size: string;
-
-  @property({ type: String, reflect: true }) display: string;
-
-  @property({ type: Boolean, reflect: true }) outlined: boolean;
-
-  @property({ type: Boolean, reflect: true }) inverted: boolean;
-
-  @property({ type: Boolean, reflect: true }) loading: boolean;
-
-  @property({ type: Boolean, reflect: true }) disabled: boolean;
-
-  @property({ type: Boolean, reflect: true }) rounded: boolean;
-
-  _buttonId: string;
-
-  static get styles(): any {
+  static get styles() {
     return [
       css`
         ${unsafeCSS(buttonStyles)}

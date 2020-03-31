@@ -1,9 +1,10 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { html } from 'lit-element';
+import { html } from '@open-wc/demoing-storybook';
 import '@fortawesome/fontawesome-free/js/all';
 // import readme from '../README.md';
 
 import '../src/bw-card';
+import { bwStyles } from '@bulma-web/styles/src/styles';
 
 export default {
   title: 'Components|Card',
@@ -12,43 +13,7 @@ export default {
 
 export const bwCard = () => html`
   <style>
-    blockquote,
-    body,
-    dd,
-    dl,
-    dt,
-    fieldset,
-    figure,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    hr,
-    html,
-    iframe,
-    legend,
-    li,
-    ol,
-    p,
-    pre,
-    textarea,
-    ul {
-      margin: 0;
-      padding: 0;
-    }
-
-    body,
-    button,
-    input,
-    select,
-    textarea {
-      font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-        'Fira Sans', 'Droid Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    }
-
-    body {
+     body {
       color: #4a4a4a;
       font-size: 1em;
       font-weight: 400;
@@ -59,6 +24,8 @@ export const bwCard = () => html`
       max-width: 350px;
       margin: 0 0 20px 10px;
     }
+
+    ${bwStyles}
   </style>
 
   <h1>card</h1>
@@ -86,14 +53,14 @@ export const bwCard = () => html`
         </h2>
         <p>Jeff Atwood</p>
       </div>
-      <p slot="footer-item">
+      <p slot="footer-item" class="card-footer-item">
         <span>
           View on
           <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
         </span>
       </p>
 
-      <p slot="footer-item">
+      <p slot="footer-item" class="card-footer-item">
         <span> Share on <a href="#">Facebook</a> </span>
       </p>
     </bw-card>
@@ -101,7 +68,7 @@ export const bwCard = () => html`
 
   <h2># card with image and header</h2>
   <div class="demo">
-    <bw-card>
+    <bw-card size="is-4by3">
       <span slot="header-title">Component</span>
       <i slot="header-icon" class="fas fa-coffee"></i>
       <img

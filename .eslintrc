@@ -1,32 +1,13 @@
 {
-  "extends": [
-    "@open-wc/eslint-config",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "eslint:recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "prettier"
-  ],
+  "extends": ["@open-wc/eslint-config", "prettier", "eslint:recommended"],
+  "plugins": ["prettier"],
   "rules": {
-    "import/extensions": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/explicit-function-return-type": "off"
+    "import/extensions": "off"
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx",
-          "css"
-        ]
+        "extensions": [".js", ".jsx", "css"]
       }
     }
   }
