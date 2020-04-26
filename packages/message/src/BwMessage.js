@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html } from 'lit-element';
 import { bwStyles } from '@bulma-web/styles/src/styles';
 
 export class BwMessage extends LitElement {
