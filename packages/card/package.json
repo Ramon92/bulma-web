@@ -1,6 +1,6 @@
 {
   "name": "@bulma-web/card",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "A bulma based card webcomponent",
   "keywords": [
     "bulma",
@@ -38,7 +38,7 @@
     "url": "https://github.com/Ramon92/bulma-web/issues"
   },
   "dependencies": {
-    "lit-element": "^2.2.1",
-    "@bulma-web/styles": "^0.0.1"
+    "@bulma-web/styles": "^0.1.0",
+    "lit-element": "^2.2.1"
   }
 }

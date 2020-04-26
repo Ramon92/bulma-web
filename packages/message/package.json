@@ -1,6 +1,6 @@
 {
   "name": "@bulma-web/message",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A bulma message web component",
   "keywords": [
     "bw-message",
@@ -36,7 +36,7 @@
     "url": "https://github.com/Ramon92/bulma-web/issues"
   },
   "dependencies": {
-    "@bulma-web/styles": "^0.0.1",
+    "@bulma-web/styles": "^0.1.0",
     "haunted": "^4.7.0",
     "lit-element": "^2.3.1",
     "lit-html": "^1.2.1"
