@@ -10,18 +10,3 @@
     -moz-osx-font-smoothing: grayscale;
   }
 </style>
-
-<script defer type="text/javascript">
-document.addEventListener('story-loaded', () => {
-  setTimeout(() => {
-    const previewElements = [...document.querySelectorAll('.preview')];
-  previewElements.forEach(element => {
-    if(element.shadowRoot) return;
-    element.attachShadow({mode: 'open'});
-    [...element.children].forEach(elem => {
-      element.shadowRoot.appendChild(elem)
-    })
-  });
-  },1000)
-});
-</script>

@@ -1,5 +1,5 @@
-import { LitElement, html, unsafeCSS } from 'lit-element';
-import mediaStyles from './media.css';
+import { LitElement, html, css } from 'lit-element';
+import {bwStyles} from '@bulma-web/styles'
 
 /**
  * The famous media object prevalent in social media interfaces, but useful in any context
@@ -16,7 +16,21 @@ import mediaStyles from './media.css';
  */
 export class BwMedia extends LitElement {
   static get styles() {
-    return unsafeCSS(mediaStyles);
+    return [
+      bwStyles,
+    css`
+    ::slotted(bw-content:not(:last-child)){
+    margin-bottom: 0.75rem;
+}
+
+::slotted([slot=media-nested]){
+  // border-top: 1px solid rgba($border, 0.5);
+  display: flex;
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+}
+    `
+    ];
   }
 
   render() {

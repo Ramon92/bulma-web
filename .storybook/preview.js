@@ -1,9 +1,14 @@
-import {addParameters, addDecorator, setCustomElements, withA11y } from '@open-wc/demoing-storybook';
- 
-  
-async function run(){
+import {
+  addParameters,
+  addDecorator,
+  setCustomElements,
+  withA11y,
+} from '@open-wc/demoing-storybook';
 
-const customElements = await (
+import { bwStyles } from '@bulma-web/styles';
+
+async function run() {
+  const customElements = await (
     await fetch(new URL('../custom-elements.json', import.meta.url))
   ).json();
 
@@ -19,3 +24,5 @@ const customElements = await (
 }
 
 run();
+
+document.adoptedStyleSheets = [bwStyles.styleSheet];

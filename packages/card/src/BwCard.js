@@ -1,6 +1,6 @@
 import { LitElement, html, css } from 'lit-element';
 
-import { bwStyles } from '@bulma-web/styles/src/styles';
+import { bwStyles } from '@bulma-web/styles';
 
 export class BwCard extends LitElement {
   static get properties() {

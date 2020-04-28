@@ -1,5 +1,5 @@
 import { LitElement, unsafeCSS, html } from 'lit-element';
-import contentStyles from './content.css';
+// import contentStyles from './content.css';
 
 /**
  *
@@ -31,7 +31,6 @@ export class BwContent extends LitElement {
   render() {
     return html`
       <style>
-        ${unsafeCSS(contentStyles)}
       </style>
     `;
   }

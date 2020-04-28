@@ -27,10 +27,8 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
     "build": "yarn build:js",
-    "build:js": "yarn babel src -d ./ --config-file ./.babelrc --source-maps inline",
-    "build:storybook": "yarn build:storybook:src && yarn build:storybook:stories",
-    "build:storybook:src": "babel src -d src --config-file ./.babelrc --source-maps inline",
-    "build:storybook:stories": "babel stories -d stories --extensions --config-file ./.babelrc --source-maps inline"
+    "build:js": "babel src -d ./ --config-file ./.babelrc --source-maps inline",
+    "build:storybook": "yarn build:storybook:src && yarn build:storybook:stories"
   },
   "bugs": {
     "url": "https://github.com/Ramon92/bulma-web/issues"

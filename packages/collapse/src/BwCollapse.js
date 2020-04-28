@@ -1,5 +1,6 @@
 import { classMap } from 'lit-html/directives/class-map';
 import { LitElement, html, css } from 'lit-element';
+import { bwStyles } from '@bulma-web/styles';
 
 const collapseStyles = css`
   :host {
@@ -32,6 +33,10 @@ export class BwCollapse extends LitElement {
         reflect: true,
       },
     };
+  }
+
+  static get styles(){
+    return [bwStyles];
   }
 
   constructor() {

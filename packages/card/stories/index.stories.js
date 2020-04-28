@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/js/all';
 // import readme from '../README.md';
 
 import '../src/bw-card';
-import { bwStyles } from '@bulma-web/styles/src/styles';
+import { bwStyles } from '@bulma-web/styles';
 
 export default {
   title: 'Components|Card',
