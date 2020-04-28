@@ -1,6 +1,6 @@
 {
   "name": "@bulma-web/styles",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A wrapper of bulma styles to make use of constructable stylesheets",
   "keywords": [
     "bulma",
