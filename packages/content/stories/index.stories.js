@@ -3,6 +3,7 @@ import { html } from '@open-wc/demoing-storybook';
 // eslint-disable-next-line import/no-extraneous-dependencies
 
 import '../src/bw-content';
+import { bwStyles } from '@bulma-web/styles';
 
 export default {
   title: 'Components|Content',
@@ -63,41 +64,42 @@ const styles = css`
 `;
 
 export const bulmaContent = () => html`
-  <style>
-    ${styles}
-  </style>
-  <!-- repalce with content component -->
-  <bw-content>
-    <h1>Content</h1>
-    <p>
-      When you can't use the CSS classes you want, or when you just want to directly use HTML tags,
-      use <code>bw-content</code> as container. It can handle almost any HTML tag:
-    </p>
-    <ul>
-      <li><code>&lt;p&gt;</code> paragraphs</li>
-      <li><code>&lt;ul&gt;</code> <code>&lt;ol&gt;</code> <code>&lt;dl&gt;</code> lists</li>
-      <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> headings</li>
-      <li><code>&lt;blockquote&gt;</code> quotes</li>
-      <li><code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code></li>
-      <li>
-        <code>&lt;table&gt;</code> <code>&lt;tr&gt;</code> <code>&lt;th&gt;</code>
-        <code>&lt;td&gt;</code> tables
-      </li>
-    </ul>
-    <p>
-      This <code>bw-content</code> element can be used in <em>any</em> context where you just want
-      to (or can only) write some <strong>text</strong>. For example, it's used for the paragraph
-      you're currently reading.
-    </p>
-  </bw-content>
+         <style>
+           ${styles}
+           ${bwStyles}
+         </style>
+         <!-- repalce with content component -->
+         <bw-content>
+           <h1>Content</h1>
+           <p>
+             When you can't use the CSS classes you want, or when you just want to directly use HTML
+             tags, use <code>bw-content</code> as container. It can handle almost any HTML tag:
+           </p>
+           <ul>
+             <li><code>&lt;p&gt;</code> paragraphs</li>
+             <li><code>&lt;ul&gt;</code> <code>&lt;ol&gt;</code> <code>&lt;dl&gt;</code> lists</li>
+             <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> headings</li>
+             <li><code>&lt;blockquote&gt;</code> quotes</li>
+             <li><code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code></li>
+             <li>
+               <code>&lt;table&gt;</code> <code>&lt;tr&gt;</code> <code>&lt;th&gt;</code>
+               <code>&lt;td&gt;</code> tables
+             </li>
+           </ul>
+           <p>
+             This <code>bw-content</code> element can be used in <em>any</em> context where you just
+             want to (or can only) write some <strong>text</strong>. For example, it's used for the
+             paragraph you're currently reading.
+           </p>
+         </bw-content>
 
-  <bw-content>
-    <p>
-      You can use the <code>is-small</code>, <code>is-medium</code> and
-      <code>is-large</code> modifiers to change the font size.
-    </p></bw-content
-  >
-`;
+         <bw-content>
+           <p>
+             You can use the <code>is-small</code>, <code>is-medium</code> and
+             <code>is-large</code> modifiers to change the font size.
+           </p></bw-content
+         >
+       `;
 
 export const small = () => html`
   <style>

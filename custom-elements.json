@@ -81,7 +81,20 @@
       ]
     },
     {
-      "name": "bw-card"
+      "name": "bw-card",
+      "attributes": [
+        {
+          "name": "size",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string"
+        }
+      ]
     },
     {
       "name": "bw-collapse",
@@ -172,6 +185,47 @@
         {
           "name": "media-right",
           "description": "small element to be aligned on the right such as a close icon button"
+        }
+      ]
+    },
+    {
+      "name": "bw-message",
+      "attributes": [
+        {
+          "name": "closeable",
+          "type": "boolean"
+        },
+        {
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "name": "active",
+          "type": "boolean",
+          "default": "true"
+        }
+      ],
+      "properties": [
+        {
+          "name": "closeable",
+          "attribute": "closeable",
+          "type": "boolean"
+        },
+        {
+          "name": "type",
+          "attribute": "type",
+          "type": "string"
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "hasHeader",
+          "type": "boolean",
+          "default": "true"
         }
       ]
     }

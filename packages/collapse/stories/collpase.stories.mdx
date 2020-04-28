@@ -1,7 +1,7 @@
 import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
 import '../src/bw-collapse';
 import '@bulma-web/button/src/bw-button';
-import bulmaStyles from 'bulma/css/bulma.css';
+import { bwStyles } from '@bulma-web/styles';
 import '@fortawesome/fontawesome-free/js/all';
 
 export const loadStory = () => {
@@ -24,7 +24,7 @@ Collapse is a easy way to toggle what you want
       return html`
       <div class="preview">
         <style>
-          ${bulmaStyles}
+          ${bwStyles}
         </style>
         <bw-collapse>
           <bw-button type="is-primary" slot="collapse-trigger">Click me!</bw-button>
@@ -58,7 +58,7 @@ Collapse is a easy way to toggle what you want
       return html`
       <div class="preview">
         <style>
-          ${bulmaStyles}
+          ${bwStyles}
         </style>
         <bw-collapse class="panel">
           <div
@@ -95,7 +95,7 @@ Collapse is a easy way to toggle what you want
     {html`
       <div class="preview">
         <style>
-          ${bulmaStyles}
+          ${bwStyles}
         </style>
         <bw-collapse class="card">
           <div

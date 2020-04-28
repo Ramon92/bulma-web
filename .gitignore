@@ -6,3 +6,7 @@ node_modules
 packages/**/*.d.ts
 packages/**/*.d.ts.map
 _site
+
+packages/**/*.js
+!packages/**/src/*.js
+!packages/**/stories/*.js
