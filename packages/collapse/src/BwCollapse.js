@@ -36,7 +36,10 @@ export class BwCollapse extends LitElement {
   }
 
   static get styles(){
-    return [bwStyles];
+    return [
+      bwStyles,
+      collapseStyles,
+    ];
   }
 
   constructor() {
@@ -62,9 +65,6 @@ export class BwCollapse extends LitElement {
     const contentElem = this.querySelector('[slot="collapse-content"]');
     this.toggleCollapse(contentElem);
     return html`
-      <style>
-        ${collapseStyles}
-      </style>
       <slot @click="${() => this.handleTrigger()}" name="collapse-trigger"></slot>
       <slot class=${classMap({ open: this.open })} name="collapse-content"></slot>
     `;

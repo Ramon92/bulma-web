@@ -1,7 +1,6 @@
 import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
 import '../src/bw-collapse';
 import '@bulma-web/button/src/bw-button';
-import { bwStyles } from '@bulma-web/styles';
 import '@fortawesome/fontawesome-free/js/all';
 
 export const loadStory = () => {
@@ -23,23 +22,22 @@ Collapse is a easy way to toggle what you want
       loadStory()
       return html`
       <div class="preview">
-        <style>
-          ${bwStyles}
-        </style>
         <bw-collapse>
           <bw-button type="is-primary" slot="collapse-trigger">Click me!</bw-button>
-          <div slot="collapse-content" class="notification">
-            <div class="content">
-              <h3>
-                Subtitle
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-                Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec
-                rutrum justo nibh eu lectus. <br />
-                Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis
-                neque.
-              </p>
+          <div slot="collapse-content">
+            <div class="notification">
+              <div class="content">
+                <h3>
+                  Subtitle
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
+                  Nulla accumsan, metus ultrices eleifend gravida, nulla nunc varius lectus, nec
+                  rutrum justo nibh eu lectus. <br />
+                  Ut vulputate semper dui. Fusce erat odio, sollicitudin vel erat vel, interdum mattis
+                  neque.
+                </p>
+              </div>
             </div>
           </div>
         </bw-collapse>
@@ -57,9 +55,6 @@ Collapse is a easy way to toggle what you want
       loadStory()
       return html`
       <div class="preview">
-        <style>
-          ${bwStyles}
-        </style>
         <bw-collapse class="panel">
           <div
             slot="collapse-trigger"
@@ -94,9 +89,6 @@ Collapse is a easy way to toggle what you want
   <Story name="Card">
     {html`
       <div class="preview">
-        <style>
-          ${bwStyles}
-        </style>
         <bw-collapse class="card">
           <div
             slot="collapse-trigger"
