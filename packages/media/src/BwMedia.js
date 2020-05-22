@@ -1,5 +1,5 @@
 import { LitElement, html, css } from 'lit-element';
-import {bwStyles} from '@bulma-web/styles'
+import { bwStyles } from '@bulma-web/styles';
 
 /**
  * The famous media object prevalent in social media interfaces, but useful in any context
@@ -15,34 +15,60 @@ import {bwStyles} from '@bulma-web/styles'
  * @extends {LitElement}
  */
 export class BwMedia extends LitElement {
+  static get properties() {
+    return {
+      class: {
+        type: String,
+        reflect: true,
+      },
+      slots: {
+        type: Object,
+        attribute: false,
+        reflect: false,
+      },
+    };
+  }
+
+  constructor() {
+    super();
+    this.class = 'media';
+    this.slots = {
+      'media-left': false,
+      'media-right': false,
+      'media-content': false,
+      'media-nested': false,
+    };
+  }
+
   static get styles() {
     return [
       bwStyles,
-    css`
-    ::slotted(bw-content:not(:last-child)){
-    margin-bottom: 0.75rem;
-}
-
-::slotted([slot=media-nested]){
-  // border-top: 1px solid rgba($border, 0.5);
-  display: flex;
-  padding-top: 0.75rem;
-  margin-top: 0.5rem;
-}
-    `
     ];
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    const slotKeys = Object.keys(this.slots);
+    slotKeys.forEach(slot => {
+      this.slots[slot] = !!this.querySelector(`[slot=${slot}]`);
+    });
   }
 
   render() {
     return html`
-      <div class="media">
-        <slot class="media-left" name="media-left"> </slot>
-        <div class="media-content">
-          <slot name="media-content"></slot>
-          <slot name="media-nested"></slot>
-        </div>
-        <slot class="media-right" name="media-right"></slot>
+    <div class="media">
+      ${this.slots['media-left'] ?
+        html`
+          <div class="media-left">
+            <slot name="media-left"> </slot>
+          </div>
+        `: ''}
+      <div class="media-content">
+        <slot name="media-content"></slot>
+        <slot name="media-nested"></slot>
       </div>
+      <slot class="media-right" name="media-right"></slot>
+    </div>
     `;
   }
 }
