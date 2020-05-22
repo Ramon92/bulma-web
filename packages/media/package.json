@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "@bulma-web/content": "^0.2.1",
+    "@bulma-web/styles": "^0.1.1",
     "lit-element": "^2.2.1"
   }
 }

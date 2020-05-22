@@ -1,5 +1,6 @@
 import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
 import '@bulma-web/button/src/bw-button';
+import '../src/bw-media';
 
 <Meta title="Layout|Media" parameters={{ component: 'bw-media' }} />
 
@@ -11,9 +12,11 @@ The media object is a UI element perfect for repeatable and nestable content.
   <Story name="simple" height="200px">
     {() => { 
       return html`
-      <bw-media>
+      <bw-media class="media">
         <figure slot="media-left">
-          <img src="https://bulma.io/images/placeholders/128x128.png" />
+          <p class="image is-64x64">
+            <img src="https://bulma.io/images/placeholders/128x128.png" />
+          </p>
         </figure>
         <bw-content slot="media-content">
           <p>
@@ -49,14 +52,14 @@ You can nest media objects up to 3 levels deep.
       }
     </style>
     <div>
-      <bw-media>
+      <bw-media >
         <figure slot="media-left">
           <!--- Replace for image component --->
           <p class="image is-64x64">
             <img src="https://bulma.io/images/placeholders/128x128.png">
           </p>
         </figure>
-          <bw-content slot="media-content">
+          <div class="content" slot="media-content">
             <p>
               <strong>Barbara Middleton</strong>
               <br>
@@ -64,7 +67,7 @@ You can nest media objects up to 3 levels deep.
               <br>
               <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
             </p>
-          </bw-content>
+          </div>
           <bw-media slot="media-nested">
             <figure slot="media-left">
               <p class="image is-48x48">
@@ -72,7 +75,7 @@ You can nest media objects up to 3 levels deep.
               </p>
             </figure>
             <div slot="media-content">
-              <bw-content>
+              <div class="content">
                 <p>
                   <strong>Sean Brown</strong>
                   <br>
@@ -80,7 +83,7 @@ You can nest media objects up to 3 levels deep.
                   <br>
                   <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
                 </p>
-              </bw-content>
+              </div>
               <bw-media>
                 <div slot="media-nested">
                 Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
