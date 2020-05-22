@@ -1,6 +1,6 @@
 {
   "name": "@bulma-web/content",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A content component to style the inner content automagically",
   "keywords": [
     "bulma",

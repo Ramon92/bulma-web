@@ -1,6 +1,6 @@
 {
   "name": "@bulma-web/media",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "The media object useful for social media interfaces, but useful in any context.",
   "keywords": [
     "web-component",
@@ -39,7 +39,7 @@
     "url": "https://github.com/Ramon92/bulma-web/issues"
   },
   "dependencies": {
-    "@bulma-web/content": "^0.2.1",
+    "@bulma-web/content": "^0.2.2",
     "@bulma-web/styles": "^0.1.1",
     "lit-element": "^2.2.1"
   }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/Ramon92/bulma-web/compare/@bulma-web/media@0.2.1...@bulma-web/media@0.2.2) (2020-05-22)
+
+
+### Bug Fixes
+
+* **media:** fix media component ([#16](https://github.com/Ramon92/bulma-web/issues/16)) ([6ea22f7](https://github.com/Ramon92/bulma-web/commit/6ea22f741a508d608a186de300d465690f5b2c1e))
+
+
+
+
+
 ## [0.2.1](https://github.com/Ramon92/bulma-web/compare/@bulma-web/media@0.2.0...@bulma-web/media@0.2.1) (2020-04-28)
 
 **Note:** Version bump only for package @bulma-web/media
