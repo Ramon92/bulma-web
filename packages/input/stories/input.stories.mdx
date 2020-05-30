@@ -1,0 +1,84 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+import '../src/bw-input';
+
+<Meta title="Form|Input" parameters={{ component: 'bw-input' }} />
+
+## Demo Bulma-Web form input web-component
+
+<Story name="simple input">
+  {html`
+    <bw-input label="First Name" placeholder="enter first name"></bw-input>
+  `}
+</Story>
+
+```html
+<bw-input label="First Name" placeholder="enter first name"></bw-input>
+```
+
+### # Colors
+
+<Story name="colors">
+  {html`
+    <bw-input type="text" color="primary" placeholder="Primary input"></bw-input>
+    <bw-input type="text" color="info" placeholder="Info input"></bw-input>
+    <bw-input type="text" color="success" placeholder="Success input"></bw-input>
+    <bw-input type="text" color="warning" placeholder="Warning input"></bw-input>
+    <bw-input type="text" color="danger" placeholder="Danger input"></bw-input>
+  `}
+</Story>
+
+```html
+<bw-input type="text" color="primary" placeholder="Primary input"></bw-input>
+<bw-input type="text" color="info" placeholder="Info input"></bw-input>
+<bw-input type="text" color="success" placeholder="Success input"></bw-input>
+<bw-input type="text" color="warning" placeholder="Warning input"></bw-input>
+<bw-input type="text" color="danger" placeholder="Danger input"></bw-input>
+```
+
+### # Label
+
+<Story name="label">
+  {html`
+    <bw-input type="text" label="label" placeholder="Primary input"></bw-input>
+  `}
+</Story>
+
+```html
+<bw-input type="text" label="label" placeholder="Primary input"></bw-input>
+```
+
+### # Prefilled
+<Story name="prefilled">
+  {html`
+    <bw-input .modelValue=${'Prefilled value'} type="text" label="Prefilled"></bw-input>
+  `}
+</Story>
+
+```html
+<bw-input .modelValue=${'Prefilled value'} type="text" label="Prefilled"></bw-input>
+```
+
+### # Read only
+
+`readonly` attribute will be delegated to the native `<input>` to make it read-only. The input will look similar to a normal one, but is not editable and has no shadow.
+
+This field **will still be included** in the parent fieldset or form's `serializedValue`.
+
+
+<Story name="Read only">
+  {html`
+    <bw-input readonly .modelValue=${'This is read only'} label="Read only"></bw-input>
+  `}
+</Story>
+
+```html
+<bw-input readonly .modelValue=${'This is read only'} label="Read only"></bw-input>
+```
+
+<Story name="icons">
+  {html`
+    <bw-input label="icon">
+      <span slot="before">%</span>
+    </bw-input>
+  `}
+</Story>

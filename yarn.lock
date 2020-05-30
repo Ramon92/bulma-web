@@ -1722,6 +1722,11 @@
   resolved "https://registry.yarnpkg.com/@base2/pretty-print-object/-/pretty-print-object-1.0.0.tgz#860ce718b0b73f4009e153541faff2cb6b85d047"
   integrity sha512-4Th98KlMHr5+JkxfcoDT//6vY8vM+iSPrLNpHhRyLx2CFYi8e2RfqPLdpbnpo0Q5lQC5hNB79yes07zb02fvCw==
 
+"@bundled-es-modules/message-format@6.0.4":
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/@bundled-es-modules/message-format/-/message-format-6.0.4.tgz#232da6877adb960f6c8f598c72588a84352de147"
+  integrity sha512-NGUoPxqsBzDwvRhY3A3L/AhS1hzS9OWappfyDOyCwE7G3W4ua28gau7QwvJz7QzA6ArbAdeb8c1mLjvd1WUFAA==
+
 "@cnakazawa/watch@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@cnakazawa/watch/-/watch-1.0.3.tgz#099139eaec7ebf07a27c1786a3ff64f39464d2ef"
@@ -2873,6 +2878,49 @@
     lit-element "~2.1.0"
     lit-html "^1.0.0"
 
+"@lion/core@0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@lion/core/-/core-0.6.0.tgz#d5954fdc28d2031c52802bbf15d1747c5aa4f5f6"
+  integrity sha512-OTmafJC1A7lxXEgEcaNr2nT0Q7Z9rSb/SJ4RuhiLx16Ahwrfd5OUxNgB9yMR+W+t3skSTTjPdIqclvo85GI5Gw==
+  dependencies:
+    "@open-wc/dedupe-mixin" "^1.2.1"
+    "@open-wc/scoped-elements" "^1.0.3"
+    lit-element "^2.2.1"
+    lit-html "^1.0.0"
+
+"@lion/field@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@lion/field/-/field-0.13.0.tgz#cbd6a0b93dfbbbf3994ccdef02f1f5561ee25c40"
+  integrity sha512-UY2Dtka6ePMSQKApL8GLOyhxj2Gd5kFrPCoUng6U6TyhN3onOxYqgMAdMh/kJG4nM/eFcCZ7Am4YZxyiXeUiOQ==
+  dependencies:
+    "@lion/core" "0.6.0"
+    "@lion/validate" "0.10.0"
+
+"@lion/input@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@lion/input/-/input-0.6.0.tgz#9c62b9bb4386a3d99458e8064fb33818ec840060"
+  integrity sha512-LZLN6ob6d1rulMkypjv1KnPygg5Lz+uczSPwGe+fKjeyHAV1zwlrkEfch03Kom0jom7bJkLvXgC8uk16diJdTg==
+  dependencies:
+    "@lion/core" "0.6.0"
+    "@lion/field" "0.13.0"
+
+"@lion/localize@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@lion/localize/-/localize-0.10.0.tgz#f3608baeb9ae65ac4e0c3efdd6208208220a6153"
+  integrity sha512-oAy07yvNkFlsMxW3TBwrHvj1QEcjVDJ50vazuekzpc0M6v9c+00/6Y3U3TnH/H5V5qjKmOHnfhqYZoVqkmaqhA==
+  dependencies:
+    "@bundled-es-modules/message-format" "6.0.4"
+    "@lion/core" "0.6.0"
+    singleton-manager "1.0.0"
+
+"@lion/validate@0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@lion/validate/-/validate-0.10.0.tgz#ea02b5b82c1f0459b2f36a633b7a2e4ccc07be45"
+  integrity sha512-+h/NLADsygJK16iMvneh79xQpPDxoNGq/TY9Ov2QBqxrf8dDJK919BJDIEYpZiq+SD18d0P2bVS+ZQlt8Sw6rg==
+  dependencies:
+    "@lion/core" "0.6.0"
+    "@lion/localize" "0.10.0"
+
 "@marionebl/sander@^0.6.0":
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/@marionebl/sander/-/sander-0.6.1.tgz#1958965874f24bc51be48875feb50d642fc41f7b"
@@ -3119,6 +3167,11 @@
     whatwg-fetch "^3.0.0"
     whatwg-url "^7.0.0"
 
+"@open-wc/dedupe-mixin@^1.2.1", "@open-wc/dedupe-mixin@^1.2.17":
+  version "1.2.17"
+  resolved "https://registry.yarnpkg.com/@open-wc/dedupe-mixin/-/dedupe-mixin-1.2.17.tgz#50fb903fc8785639487d7987caae45d7bba08ec7"
+  integrity sha512-9A3WohqNxEloJa4y1DuBL5zH12cNRNW1vsrkiaLMnOGuQdhibs2XY1oliudsKpvIeNjDXRVRPUdIIzn65BypCw==
+
 "@open-wc/demoing-storybook@^2.0.0":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@open-wc/demoing-storybook/-/demoing-storybook-2.1.1.tgz#3167f189573795f6024322b86b4150764ffe5966"
@@ -3191,6 +3244,14 @@
   dependencies:
     "@open-wc/rollup-plugin-html" "^1.0.2"
     polyfills-loader "^1.5.6"
+
+"@open-wc/scoped-elements@^1.0.3":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@open-wc/scoped-elements/-/scoped-elements-1.1.1.tgz#732744dac4d029ffacdeb169d85855714eda9d0c"
+  integrity sha512-Fx9bFOA14xGeNFQpSeyp6GmqW1vJyETr1qlem9pDS3hlK/HpWUtoBRAPyo4yexjY+aeSsenUeAYDXzPWQgeWXw==
+  dependencies:
+    "@open-wc/dedupe-mixin" "^1.2.17"
+    lit-html "^1.0.0"
 
 "@open-wc/webpack-import-meta-loader@^0.4.1":
   version "0.4.1"
@@ -4603,10 +4664,10 @@ bulma@^0.7.5:
   resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.5.tgz#35066c37f82c088b68f94450be758fc00a967208"
   integrity sha512-cX98TIn0I6sKba/DhW0FBjtaDpxTelU166pf7ICXpCCuplHWyu6C9LYZmL5PEsnePIeJaiorsTEzzNk3Tsm1hw==
 
-bulma@^0.8.1:
-  version "0.8.1"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.8.1.tgz#a5feacb703b73a87fdeae4f0d12317d62fc1d301"
-  integrity sha512-Afi2zv4DKmNSYfmx55V+Mtnt8+WfR8Rs65kWArmzEuWP7vNr7dSAEDI+ORZlgOR1gueNZwpKaPdUi4ZiTNwgPA==
+bulma@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.8.2.tgz#5d928f16ed4a84549c2873f95c92c38c69c631a7"
+  integrity sha512-vMM/ijYSxX+Sm+nD7Lmc1UgWDy2JcL2nTKqwgEqXuOMU+IGALbXd5MLt/BcjBAPLIx36TtzhzBcSnOP974gcqA==
 
 byline@^5.0.0:
   version "5.0.0"
@@ -12358,6 +12419,11 @@ simplebar@^4.2.3:
     lodash.memoize "^4.1.2"
     lodash.throttle "^4.1.1"
     resize-observer-polyfill "^1.5.1"
+
+singleton-manager@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/singleton-manager/-/singleton-manager-1.0.0.tgz#f98539c9809895cb209d6908c78b088ec43711dc"
+  integrity sha512-7VVITgcGAxt+raPcALHkIgnPwkumZAVGp5zZGm6QjxXPg11d3+q4qF16gVsw1d+ypSzSisPr8O269zb3IF5AKA==
 
 sisteransi@^1.0.3:
   version "1.0.4"

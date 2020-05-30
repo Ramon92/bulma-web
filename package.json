@@ -26,7 +26,8 @@
     "@bulma-web/media": "yarn workspace @bulma-web/media",
     "@bulma-web/collapse": "yarn workspace @bulma-web/collapse",
     "@bulma-web/message": "yarn workspace @bulma-web/message",
-    "@bulma-web/styles": "yarn workspace @bulma-web/styles"
+    "@bulma-web/styles": "yarn workspace @bulma-web/styles",
+    "@bulma-web/input": "yarn workspace @bulma-web/input"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
