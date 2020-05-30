@@ -1,7 +1,10 @@
 # bulma-web
+[![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@master/badge/badge-storybook.svg)](https://bulma-web.netlify.app/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e013fb38-9c2b-4c16-b90e-59a9b985ae70/deploy-status)](https://app.netlify.com/sites/bulma-web/deploys)
 
 > Bulma-web is a lightweight component library of UI components build with web-componebts in mind and it is based on [Bulma](https://bulma.io)
+
+[Live Demo](https://bulma-web.netlify.app/)
 
 ## Features
 * Framework agnostic web-components
