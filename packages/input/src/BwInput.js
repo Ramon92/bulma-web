@@ -19,6 +19,7 @@ export class BwInput extends LionInput {
     };
   }
 
+  // update styles
   static get styles() {
     return [
       ...super.styles,
@@ -26,6 +27,9 @@ export class BwInput extends LionInput {
       css`
         :host {
           margin-bottom: 0.75rem;
+        }
+        ::slotted([slot=before]){
+          top: 30px !important;
         }
       `,
     ];
@@ -41,32 +45,30 @@ export class BwInput extends LionInput {
       },
       input: () => {
         // TODO: Find a better way to do value delegation via attr
-        const native = document.createElement('input');
+        const native = super.slots.input();
         native.classList.add('input');
-        if (this.hasAttribute('value')) {
-          native.setAttribute('value', this.getAttribute('value'));
-        }
         return native;
       },
     };
   }
 
-   connectedCallback() {
+  connectedCallback() {
     super.connectedCallback();
     this.classList.add('control');
     const beforeSlot = this._beforeNode;
-    if(beforeSlot){
-      beforeSlot.classList.add('is-left', 'icon');
-      this.classList.add('has-icons-left');
+    if (beforeSlot) {
+      this._addBeforeSlot(beforeSlot);
     }
-    // console.log('the before slot: ', this.querySelector('[slot="before"]'));
-    console.log('the before slot: ', beforeSlot);
   }
 
-  
-
-  get _beforeNode(){
+  get _beforeNode() {
     return this.__getDirectSlotChild('before');
+  }
+
+  _addBeforeSlot(beforeSlot) {
+    beforeSlot.classList.add('is-left', 'icon');
+    this.classList.add('has-icons-left');
+    this.appendChild(beforeSlot);
   }
 
   updated(changedProperties) {
