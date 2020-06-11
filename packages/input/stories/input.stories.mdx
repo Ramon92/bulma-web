@@ -8,7 +8,7 @@ import '../src/bw-input';
 
 <Story name="Main">
   {html`
-    <bw-input label="First Name" placeholder="enter first name"></bw-input>
+  <bw-input label="First Name" placeholder="enter first name"></bw-input>
   `}
 </Story>
 
@@ -31,11 +31,11 @@ import '../src/bw-input';
 
 <Story name="colors">
   {html`
-    <bw-input type="text" color="primary" placeholder="Primary input"></bw-input>
-    <bw-input type="text" color="info" placeholder="Info input"></bw-input>
-    <bw-input type="text" color="success" placeholder="Success input"></bw-input>
-    <bw-input type="text" color="warning" placeholder="Warning input"></bw-input>
-    <bw-input type="text" color="danger" placeholder="Danger input"></bw-input>
+  <bw-input type="text" color="primary" placeholder="Primary input"></bw-input>
+  <bw-input type="text" color="info" placeholder="Info input"></bw-input>
+  <bw-input type="text" color="success" placeholder="Success input"></bw-input>
+  <bw-input type="text" color="warning" placeholder="Warning input"></bw-input>
+  <bw-input type="text" color="danger" placeholder="Danger input"></bw-input>
   `}
 </Story>
 
@@ -51,7 +51,7 @@ import '../src/bw-input';
 
 <Story name="label">
   {html`
-    <bw-input type="text" label="label" placeholder="Primary input"></bw-input>
+  <bw-input type="text" label="label" placeholder="Primary input"></bw-input>
   `}
 </Story>
 
@@ -62,7 +62,7 @@ import '../src/bw-input';
 ### # Prefilled
 <Story name="prefilled">
   {html`
-    <bw-input .modelValue=${'Prefilled value'} type="text" label="Prefilled"></bw-input>
+  <bw-input .modelValue=${'Prefilled value'} type="text" label="Prefilled"></bw-input>
   `}
 </Story>
 
@@ -79,15 +79,13 @@ This field **will still be included** in the parent fieldset or form's `serializ
 
 <Story name="Read only">
   {html`
-    <bw-input readonly .modelValue=${'This is read only'} label="Read only"></bw-input>
+  <bw-input readonly .modelValue=${'This is read only'} label="Read only"></bw-input>
   `}
 </Story>
 
 ```html
 <bw-input 
-  readonly 
-  .modelValue=${'This is read only'} 
-  label="Read only">
+  readonly .modelValue=${'This is read only'} label="Read only">
 </bw-input>
 ```
 
@@ -95,7 +93,7 @@ This field **will still be included** in the parent fieldset or form's `serializ
 
 <Story name="disabled">
   {html`
-    <bw-input .modelValue=${'This is disabled'} label="Disabled"></bw-input>
+  <bw-input .modelValue=${'This is disabled'} label="Disabled"></bw-input>
   `}
 </Story>
 
@@ -103,7 +101,7 @@ This field **will still be included** in the parent fieldset or form's `serializ
 
 <Story name="Loading">
   {html`
-    <bw-input loading placeholder="Loading input"></bw-input>
+  <bw-input loading placeholder="Loading input"></bw-input>
   `}
 </Story>
 
@@ -113,15 +111,19 @@ Use the slot `before` to place icons or any content in the input field at the st
 
 <Story name="Before">
   {html`
-    <bw-input placeholder="Music">
-      <span slot="before"><i class="fas fa-headphones"></i></span>
-    </bw-input>
+  <bw-input placeholder="Music">
+    <span slot="before">
+      <i class="fas fa-headphones"></i>
+    </span>
+  </bw-input>
   `}
 </Story>
 
 ```html
 <bw-input placeholder="Music">
-  <span slot="before"><i class="fas fa-headphones"></i></span>
+  <span slot="before">
+    <i class="fas fa-headphones"></i>
+  </span>
 </bw-input>
 ```
 
@@ -130,32 +132,44 @@ Use the slot `after` to place icons or any content in the input field at the end
 
 <Story name="After">
   {html`
-    <bw-input placeholder="Music">
-      <span slot="after"><i class="fas fa-check"></i></span>
-    </bw-input>
+  <bw-input placeholder="Music">
+    <span slot="after">
+      <i class="fas fa-check"></i>
+    </span>
+  </bw-input>
   `}
 </Story>
 
 ```html
 <bw-input placeholder="Music">
-  <span slot="after"><i class="fas fa-check"></i></span>
+  <span slot="after">
+    <i class="fas fa-check"></i>
+  </span>
 </bw-input>
 ```
 
 Before and after combined
 <Story name="Before and After">
   {html`
-    <bw-input placeholder="Music">
-      <span slot="before"><i class="fas fa-headphones"></i></span>
-       <span slot="after"><i class="fas fa-check"></i></span>
-    </bw-input>
+  <bw-input placeholder="Music">
+    <span slot="before">
+      <i class="fas fa-headphones"></i>
+    </span>
+    <span slot="after">
+      <i class="fas fa-check"></i>
+    </span>
+  </bw-input>
   `}
 </Story>
 
 ```html
 <bw-input placeholder="Music">
-  <span slot="before"><i class="fas fa-headphones"></i></span>
-  <span slot="after"><i class="fas fa-check"></i></span>
+  <span slot="before">
+    <i class="fas fa-headphones"></i>
+  </span>
+  <span slot="after">
+    <i class="fas fa-check"></i>
+  </span>
 </bw-input>
 ```
 
