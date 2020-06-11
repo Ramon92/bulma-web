@@ -1,6 +1,6 @@
 {
   "name": "@bulma-web/media",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "The media object useful for social media interfaces, but useful in any context.",
   "keywords": [
     "web-component",
@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "@bulma-web/content": "^0.2.2",
-    "@bulma-web/styles": "^0.1.1",
+    "@bulma-web/styles": "^0.1.2",
     "lit-element": "^2.2.1"
   }
 }
