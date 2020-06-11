@@ -13,6 +13,10 @@
   "homepage": "https://bulma-web.netlify.app/",
   "license": "MIT",
   "main": "bw-input.js",
+  "module": "bw-input.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "lib": "src",
     "test": "__tests__"
