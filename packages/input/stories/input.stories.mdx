@@ -1,11 +1,12 @@
 import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+import '@fortawesome/fontawesome-free/js/all';
 import '../src/bw-input';
 
 <Meta title="Form|Input" parameters={{ component: 'bw-input' }} />
 
 ## Demo Bulma-Web form input web-component
 
-<Story name="simple input">
+<Story name="Main">
   {html`
     <bw-input label="First Name" placeholder="enter first name"></bw-input>
   `}
@@ -14,6 +15,17 @@ import '../src/bw-input';
 ```html
 <bw-input label="First Name" placeholder="enter first name"></bw-input>
 ```
+
+## Features
+* Based on [@lion/input](https://lion-web-components.netlify.app/?path=/docs/forms-input--main)
+* Extra visual elements can be added via `slots`
+  * **label:** can also be provided via the `label` attribute, but the `slot` can be used to change the `html` and `CSS` of the label. For example add an `u-sr-only` class to the label to make it visually hidden. A label is always needed for accessibility reasons.
+  * **help-text:** a helper text shown below the label to give extra clarification.
+  * **before:** can be used to place an icon at the start of the input
+  * **after:** can be used to show currency, percentage or an icon
+* Delegates attributes like `type`, `disabled`, `placeholder` and `read-only` to the native input.
+* __can not yet make use of validation__
+
 
 ### # Colors
 
@@ -72,13 +84,79 @@ This field **will still be included** in the parent fieldset or form's `serializ
 </Story>
 
 ```html
-<bw-input readonly .modelValue=${'This is read only'} label="Read only"></bw-input>
+<bw-input 
+  readonly 
+  .modelValue=${'This is read only'} 
+  label="Read only">
+</bw-input>
 ```
 
-<Story name="icons">
+### # Disabled
+
+<Story name="disabled">
   {html`
-    <bw-input label="icon">
-      <span slot="before">%</span>
+    <bw-input .modelValue=${'This is disabled'} label="Disabled"></bw-input>
+  `}
+</Story>
+
+### # Loading
+
+<Story name="Loading">
+  {html`
+    <bw-input loading placeholder="Loading input"></bw-input>
+  `}
+</Story>
+
+
+### # Before
+Use the slot `before` to place icons or any content in the input field at the start of the field
+
+<Story name="Before">
+  {html`
+    <bw-input placeholder="Music">
+      <span slot="before"><i class="fas fa-headphones"></i></span>
     </bw-input>
   `}
 </Story>
+
+```html
+<bw-input placeholder="Music">
+  <span slot="before"><i class="fas fa-headphones"></i></span>
+</bw-input>
+```
+
+### # After
+Use the slot `after` to place icons or any content in the input field at the end of the field
+
+<Story name="After">
+  {html`
+    <bw-input placeholder="Music">
+      <span slot="after"><i class="fas fa-check"></i></span>
+    </bw-input>
+  `}
+</Story>
+
+```html
+<bw-input placeholder="Music">
+  <span slot="after"><i class="fas fa-check"></i></span>
+</bw-input>
+```
+
+Before and after combined
+<Story name="Before and After">
+  {html`
+    <bw-input placeholder="Music">
+      <span slot="before"><i class="fas fa-headphones"></i></span>
+       <span slot="after"><i class="fas fa-check"></i></span>
+    </bw-input>
+  `}
+</Story>
+
+```html
+<bw-input placeholder="Music">
+  <span slot="before"><i class="fas fa-headphones"></i></span>
+  <span slot="after"><i class="fas fa-check"></i></span>
+</bw-input>
+```
+
+

@@ -1,3 +1,4 @@
+/* eslint-disable wc/no-self-class */
 import { LionInput } from '@lion/input';
 import { bwStyles } from '@bulma-web/styles';
 import { css } from 'lit-element';
@@ -16,20 +17,22 @@ export class BwInput extends LionInput {
         type: String,
         reflect: true,
       },
+      loading: {
+        type: Boolean,
+        reflect: true,
+      },
     };
   }
 
   // update styles
   static get styles() {
+    // TODO: add styles to bw-styles
     return [
       ...super.styles,
       bwStyles,
       css`
         :host {
           margin-bottom: 0.75rem;
-        }
-        ::slotted([slot=before]){
-          top: 30px !important;
         }
       `,
     ];
@@ -53,11 +56,15 @@ export class BwInput extends LionInput {
   }
 
   connectedCallback() {
-    super.connectedCallback();
-    this.classList.add('control');
-    const beforeSlot = this._beforeNode;
-    if (beforeSlot) {
-      this._addBeforeSlot(beforeSlot);
+    if (super.connectedCallback) {
+      super.connectedCallback();
+    }
+    this.classList.add('control'); // add styles when extending bulma
+    if (this._beforeNode) {
+      this._addBeforeSlot();
+    }
+    if (this._afterNode) {
+      this._addAfterSlot();
     }
   }
 
@@ -65,10 +72,20 @@ export class BwInput extends LionInput {
     return this.__getDirectSlotChild('before');
   }
 
-  _addBeforeSlot(beforeSlot) {
-    beforeSlot.classList.add('is-left', 'icon');
+  get _afterNode() {
+    return this.__getDirectSlotChild('after');
+  }
+
+  _addBeforeSlot() {
+    this._beforeNode.classList.add('is-left', 'icon');
     this.classList.add('has-icons-left');
-    this.appendChild(beforeSlot);
+    this.appendChild(this._beforeNode);
+  }
+
+  _addAfterSlot() {
+    this._afterNode.classList.add('is-right', 'icon');
+    this.classList.add('has-icons-right');
+    this.appendChild(this._afterNode);
   }
 
   updated(changedProperties) {
@@ -90,6 +107,10 @@ export class BwInput extends LionInput {
       };
       const hasColor = this._inputNode.className.includes('color');
       addColor[hasColor]();
+    }
+    if (changedProperties.has('loading')) {
+      if (this.loading) this.classList.add('is-loading');
+      if (!this.loading) this.classList.remove('is-loading');
     }
   }
 }
