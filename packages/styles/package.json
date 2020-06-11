@@ -34,7 +34,7 @@
     "url": "https://github.com/Ramon92/bulma-web/issues"
   },
   "dependencies": {
-    "bulma": "^0.8.1",
+    "bulma": "^0.8.2",
     "lit-element": "^2.3.1"
   }
 }

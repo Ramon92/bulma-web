@@ -15,7 +15,7 @@ module.exports = {
     watch: true,
     open: true,
     nodeResolve: true,
-    fileExtensions: ['.mdx', '.js', '.css'],
+    fileExtensions: ['.mdx', '.md', '.js', '.css'],
     rootDir: './',
     babelConfig: {
       presets: [

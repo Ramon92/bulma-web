@@ -1,0 +1,42 @@
+{
+  "name": "@bulma-web/input",
+  "version": "0.0.1",
+  "description": "A bulma based input web component",
+  "keywords": [
+    "bw-input",
+    "bulma-web",
+    "web",
+    "components",
+    "lit-element"
+  ],
+  "author": "Ramon Osenga <ramon.osenga@gmail.com>",
+  "homepage": "https://bulma-web.netlify.app/",
+  "license": "MIT",
+  "main": "bw-input.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ramon92/bulma-web.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "yarn build:js ",
+    "build:js": "yarn babel src -d ./ --config-file ./.babelrc --source-maps inline",
+    "build:storybook": "yarn build:scss && yarn build:storybook:src && yarn build:storybook:stories",
+    "build:storybook:src": "babel src -d src --config-file ./.babelrc --source-maps inline",
+    "build:storybook:stories": "babel stories -d stories --config-file ./.babelrc --source-maps inline",
+    "build:scss": "node-sass src -o src"
+  },
+  "bugs": {
+    "url": "https://github.com/Ramon92/bulma-web/issues"
+  },
+  "dependencies": {
+    "@bulma-web/styles": "^0.1.1",
+    "@lion/input": "^0.6.0",
+    "lit-element": "^2.3.1",
+    "lit-html": "^1.2.1"
+  }
+}

@@ -6,6 +6,7 @@ import {
 } from '@open-wc/demoing-storybook';
 
 import { bwStyles } from '@bulma-web/styles';
+import { css } from 'lit-element';
 
 async function run() {
   const customElements = await (
@@ -25,4 +26,14 @@ async function run() {
 
 run();
 
-document.adoptedStyleSheets = [bwStyles.styleSheet];
+const additionalStyles = css`
+  .tag:not(body) {
+    background-color: transparent !important;
+    padding: 0;
+  }
+  .token.attr-name {
+    padding-left: 0.55em;
+  }
+`;
+
+document.adoptedStyleSheets = [bwStyles.styleSheet, additionalStyles.styleSheet];
