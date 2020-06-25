@@ -10,3 +10,5 @@ _site
 packages/**/*.js
 !packages/**/src/*.js
 !packages/**/stories/*.js
+
+**/*-css.js

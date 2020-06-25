@@ -1,7 +1,7 @@
-import { html, unsafeCSS, css } from 'lit-element';
+import { html, css } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map';
 import { LionButton } from '@lion/button';
-import { bwStyles } from '@bulma-web/styles';
+import { style } from './button-css';
 
 export class BwButton extends LionButton {
   static get properties (){
@@ -19,7 +19,7 @@ export class BwButton extends LionButton {
 
   static get styles() {
     return [
-      bwStyles,
+      style,
       css`
         .btn {
           box-sizing: border-box;

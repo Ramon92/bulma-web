@@ -1,9 +1,9 @@
-import bulmaStyles from 'bulma/css/bulma.min.css';
-import { css, unsafeCSS } from 'lit-element';
+import { css } from 'lit-element';
+import {style} from './bw-styles-css'
 
 export const bwStyles = css`
-  ${unsafeCSS(bulmaStyles)}
-  * {
-    box-sizing: border-box;
-  }
-`;
+         ${style}
+         * {
+           box-sizing: border-box;
+         }
+       `;

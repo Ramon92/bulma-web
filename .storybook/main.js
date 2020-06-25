@@ -1,4 +1,4 @@
-const {babel} =  require('@rollup/plugin-babel');
+const { babel } = require('@rollup/plugin-babel');
 
 module.exports = {
   stories: ['../packages/**/stories/*.stories.{js,mdx}'],
@@ -30,26 +30,12 @@ module.exports = {
         ],
       ],
       plugins: [
-        [
-          '@babel/plugin-proposal-decorators',
-          {
-            legacy: true,
-          },
-        ],
-        [
-          '@babel/plugin-proposal-class-properties',
-          {
-            loose: true,
-          },
-        ],
-        [
-          'babel-plugin-inline-import',
-          {
-            extensions: ['.css'],
-          },
-        ],
+        '@babel/plugin-proposal-class-properties',
+        ['@babel/proposal-decorators', { decoratorsBeforeExport: true }],
+        '@babel/plugin-syntax-dynamic-import',
+        '@babel/plugin-proposal-object-rest-spread',
       ],
     },
   },
-  outputDir: '../_site'
+  outputDir: '../_site',
 };
