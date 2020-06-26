@@ -24,8 +24,19 @@ import '../src/bw-input';
   * **before:** can be used to place an icon at the start of the input
   * **after:** can be used to show currency, percentage or an icon
 * Delegates attributes like `type`, `disabled`, `placeholder` and `read-only` to the native input.
-* __can not yet make use of validation__
+* __can not yet make use of validation__ This will be added later on
 
+## How to use
+### Installation
+```bash
+npm i --save @bulma-web/input
+# or
+yarn add --save @bulma-web/input
+```
+
+```js
+import "@bulma-web/input";
+```
 
 ### # Colors
 
@@ -93,7 +104,7 @@ This field **will still be included** in the parent fieldset or form's `serializ
 
 <Story name="disabled">
   {html`
-  <bw-input .modelValue=${'This is disabled'} label="Disabled"></bw-input>
+  <bw-input disabled .modelValue=${'This is disabled'} label="Disabled"></bw-input>
   `}
 </Story>
 

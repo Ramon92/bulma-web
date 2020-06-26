@@ -1,5 +1,6 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html } from 'lit-element';
 import { bwStyles } from '@bulma-web/styles';
+import { style } from './message-css';
 
 export class BwMessage extends LitElement {
   static get properties() {
@@ -28,7 +29,10 @@ export class BwMessage extends LitElement {
   }
 
   static get styles() {
-    return [bwStyles];
+    return [
+      bwStyles,
+      style,
+    ];
   }
 
   closeMessage() {

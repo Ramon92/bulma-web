@@ -7,8 +7,8 @@
   ],
   "scripts": {
     "start": "run-p storybook watch:scss",
-    "watch:scss": "node-sass -rw ./packages/ -o ./packages/",
-    "build:scss": "node-sass -r ./packages/ -o ./packages/",
+    "watch:scss": "node scripts/watcher.js",
+    "build:scss": "./scripts/build-styling.sh",
     "site:build": "run-s build storybook:build",
     "storybook": "start-storybook",
     "storybook:build": "wca analyze packages/**/src/*.js --outFile custom-elements.json && build-storybook",
@@ -19,7 +19,9 @@
     "lint": "npm run lint:eslint && npm run lint:prettier",
     "format": "npm run format:eslint && npm run format:prettier",
     "check-types": "tsc",
-    "build": "lerna run build",
+    "build": "npm run build:scss && lerna run build",
+    "postinstall": "npm run bootstrap",
+    "bootstrap": "lerna bootstrap",
     "@bulma-web/button": "yarn workspace @bulma-web/button",
     "@bulma-web/card": "yarn workspace @bulma-web/card",
     "@bulma-web/content": "yarn workspace @bulma-web/content",
@@ -93,6 +95,9 @@
     ]
   },
   "dependencies": {
-    "lit-element": "^2.2.1"
+    "lit-element": "^2.2.1",
+    "node-sass-import": "^2.0.1",
+    "node-watch": "^0.6.4",
+    "sass": "^1.26.8"
   }
 }

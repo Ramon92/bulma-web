@@ -1,6 +1,6 @@
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html } from 'lit-element';
+import {style as cardStyles} from './card-css';
 
-import { bwStyles } from '@bulma-web/styles';
 
 export class BwCard extends LitElement {
   static get properties() {
@@ -12,18 +12,7 @@ export class BwCard extends LitElement {
   }
 
   static get styles() {
-    return [
-      bwStyles,
-      css`
-        ::slotted([slot='image']) {
-          height: 100%;
-          width: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-        }
-      `,
-    ];
+    return [cardStyles];
   }
 
   render() {

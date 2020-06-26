@@ -1,7 +1,7 @@
 /* eslint-disable wc/no-self-class */
 import { LionInput } from '@lion/input';
-import { bwStyles } from '@bulma-web/styles';
 import { css } from 'lit-element';
+import { style } from './input-css';
 
 /**
  * LionInput: extension of lion-field with native input element in place and user friendly API
@@ -26,16 +26,7 @@ export class BwInput extends LionInput {
 
   // update styles
   static get styles() {
-    // TODO: add styles to bw-styles
-    return [
-      ...super.styles,
-      bwStyles,
-      css`
-        :host {
-          margin-bottom: 0.75rem;
-        }
-      `,
-    ];
+    return [...super.styles, style];
   }
 
   get slots() {
@@ -50,6 +41,14 @@ export class BwInput extends LionInput {
         // TODO: Find a better way to do value delegation via attr
         const native = super.slots.input();
         native.classList.add('input');
+        native.addEventListener('focus', () => {
+          if (this._beforeNode) this._beforeNode.classList.add('focused');
+          if (this._afterNode) this._afterNode.classList.add('focused');
+        });
+        native.addEventListener('blur', () => {
+          if (this._beforeNode) this._beforeNode.classList.remove('focused');
+          if (this._afterNode) this._afterNode.classList.remove('focused');
+        });
         return native;
       },
     };

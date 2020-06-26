@@ -5,7 +5,7 @@ import {
   withA11y,
 } from '@open-wc/demoing-storybook';
 
-import { bwStyles } from '@bulma-web/styles';
+import { style } from '@bulma-web/styles/src/bw-styles-css';
 import { css } from 'lit-element';
 
 async function run() {
@@ -36,4 +36,4 @@ const additionalStyles = css`
   }
 `;
 
-document.adoptedStyleSheets = [bwStyles.styleSheet, additionalStyles.styleSheet];
+document.adoptedStyleSheets = [style.styleSheet, additionalStyles.styleSheet];

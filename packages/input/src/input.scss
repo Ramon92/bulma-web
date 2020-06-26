@@ -1,0 +1,307 @@
+@import 'bulma/sass/utilities/_all.sass';
+// @import 'bulma/sass/utilities/controls.sass';
+@import 'bulma/sass/base/_all.sass';
+// @import '../../../node_modules/bulma/sass/form/tools.sass';
+@import '../../../node_modules/bulma/sass/form/shared.sass';
+
+// copied from: '/bulma/sass/form/input-textarea.sass';
+// todo: make re-usable styles for common input styles
+
+// todo move to control styles in js
+$control-radius: $radius !default;
+$control-radius-small: $radius-small !default;
+
+$control-border-width: 1px !default;
+
+$control-height: 2.25em !default;
+$control-line-height: 1.5 !default;
+
+$control-padding-vertical: calc(0.375em - #{$control-border-width}) !default;
+$control-padding-horizontal: calc(0.625em - #{$control-border-width}) !default;
+
+@mixin control($selector) {
+  ::slotted(#{$selector}) {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    align-items: center;
+    border: $control-border-width solid transparent;
+    border-radius: $control-radius;
+    box-shadow: none;
+    display: inline-flex;
+    font-size: $size-normal;
+    height: $control-height;
+    justify-content: flex-start;
+    line-height: $control-line-height;
+    padding-bottom: $control-padding-vertical;
+    padding-left: $control-padding-horizontal;
+    padding-right: $control-padding-horizontal;
+    padding-top: $control-padding-vertical;
+    position: relative;
+    vertical-align: top;
+  }
+  // States
+  ::slotted(#{$selector}:focus),
+  ::slotted(#{$selector}.is-focused),
+  ::slotted(#{$selector}:active),
+  ::slotted(#{$selector}.is-active) {
+    outline: none;
+  }
+  ::slotted(#{$selector}[disabled]) {
+    cursor: not-allowed;
+  }
+}
+
+// The controls sizes use mixins so they can be used at different breakpoints
+@mixin control-small {
+  border-radius: $control-radius-small;
+  font-size: $size-small;
+}
+@mixin control-medium {
+  font-size: $size-medium;
+}
+@mixin control-large {
+  font-size: $size-large;
+}
+
+/**
+ * set default css variables
+*/
+
+// $input-color: $grey-darker !default;
+// $input-background-color: $white !default;
+// $input-border-color: $grey-lighter !default;
+// $input-height: $control-height !default;
+// $input-shadow: inset 0 1px 2px rgba($black, 0.1) !default;
+// $input-placeholder-color: rgba($input-color, 0.3) !default;
+
+// $input-hover-color: $grey-darker !default;
+// $input-hover-border-color: $grey-light !default;
+
+// $input-focus-color: $grey-darker !default;
+// $input-focus-border-color: $link !default;
+// $input-focus-box-shadow-size: 0 0 0 0.125em !default;
+// $input-focus-box-shadow-color: rgba($link, 0.25) !default;
+
+// $input-disabled-color: $text-light !default;
+// $input-disabled-background-color: $background !default;
+// $input-disabled-border-color: $background !default;
+// $input-disabled-placeholder-color: rgba($input-disabled-color, 0.3) !default;
+
+// $input-arrow: $link !default;
+
+// $input-icon-color: $grey-lighter !default;
+// $input-icon-active-color: $grey !default;
+
+// $input-radius: $radius !default;
+
+@mixin input($selector) {
+  ::slotted(#{$selector}) {
+    background-color: $input-background-color;
+    border-color: $input-border-color;
+    border-radius: $input-radius;
+    color: $input-color;
+  }
+  ::slotted(#{$selector}:focus),
+  ::slotted(#{$selector}.is-focused),
+  ::slotted(#{$selector}:active),
+  ::slotted(#{$selector}.is-active) {
+    border-color: $input-focus-border-color;
+    box-shadow: $input-focus-box-shadow-size $input-focus-box-shadow-color;
+  }
+  ::slotted(#{$selector}[disabled]) {
+    background-color: $input-disabled-background-color;
+    border-color: $input-disabled-border-color;
+    box-shadow: none;
+    color: $input-disabled-color;
+  }
+  ::slotted(#{$selector}[disabled]:placeholder) {
+    color: $input-disabled-placeholder-color;
+  }
+}
+
+@mixin input-hover($selector) {
+  ::slotted(#{$selector}:hover),
+  ::slotted(#{$selector}.is-hovered) {
+    border-color: $input-hover-border-color;
+  }
+}
+
+@mixin input-textarea($selector) {
+  @include input($selector);
+  ::slotted(#{$selector}) {
+    box-shadow: $input-shadow;
+    max-width: 100%;
+    width: 100%;
+  }
+  ::slotted(#{$selector}[readonly]) {
+    box-shadow: none;
+  }
+  // Colors
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    ::slotted(#{$selector}.is-#{$name}) {
+      border-color: $color;
+    }
+    ::slotted(#{$selector}.is-#{$name}:focus),
+    ::slotted(#{$selector}.is-#{$name}.is-focused),
+    ::slotted(#{$selector}.is-#{$name}:active),
+    ::slotted(#{$selector}.is-#{$name}.is-active) {
+      box-shadow: $input-focus-box-shadow-size rgba($color, 0.25);
+    }
+  }
+  // Sizes
+  ::slotted(#{$selector}.is-small) {
+    @include control-small;
+  }
+  ::slotted(#{$selector}.is-medium) {
+    @include control-medium;
+  }
+  ::slotted(#{$selector}.is-large) {
+    @include control-large;
+  }
+  // Modifiers
+  ::slotted(#{$selector}.is-fullwidth) {
+    display: block;
+    width: 100%;
+  }
+  ::slotted(#{$selector}.is-inline) {
+    display: inline;
+    width: auto;
+  }
+}
+
+@mixin controlIcons($slotSelector) {
+  :host(.control) {
+    box-sizing: border-box;
+    clear: both;
+    font-size: $size-normal;
+    position: relative;
+    text-align: left;
+  }
+  :host(.control.has-icons-left),
+  :host(.control.has-icons-right) {
+    ::slotted(.icon) {
+      color: $input-icon-color;
+      height: $input-height;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: $input-height;
+      z-index: 4;
+    }
+
+    ::slotted(.icon.focused) {
+      color: $input-icon-active-color !important;
+    }
+  }
+
+  :host(.control.has-icons-left) {
+    ::slotted(.input) {
+      padding-left: $input-height;
+    }
+    ::slotted(.icon.is-left) {
+      left: 0;
+    }
+  }
+  :host(.control.has-icons-right) {
+    ::slotted(.input) {
+      padding-right: $input-height;
+    }
+    ::slotted(.icon.is-right) {
+      right: 0;
+    }
+  }
+
+  :host(.control.is-loading) {
+    .input-group__input::after{
+    @extend %loader;
+    animation: spinAround .5s infinite linear;
+    position: absolute !important;
+    right: 0.625em;
+    top: 0.625em;
+    z-index: 4;
+    }
+  }
+}
+
+$icon-dimensions: 1.5rem !default;
+$icon-dimensions-small: 1rem !default;
+$icon-dimensions-medium: 2rem !default;
+$icon-dimensions-large: 3rem !default;
+
+// todo: move to style to import icon styles seperately ass css stylesheet
+@mixin slottedIcon {
+  ::slotted(.icon) {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: $icon-dimensions;
+    width: $icon-dimensions;
+  }
+  // Sizes
+  ::slotted(.icon.is-small) {
+    height: $icon-dimensions-small;
+    width: $icon-dimensions-small;
+  }
+  ::slotted(.icon.is-medium) {
+    height: $icon-dimensions-medium;
+    width: $icon-dimensions-medium;
+  }
+  ::slotted(.icon.is-large) {
+    height: $icon-dimensions-large;
+    width: $icon-dimensions-large;
+  }
+}
+
+// todo: move to style to import icon styles seperately ass css stylesheet
+@mixin icon {
+  .icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: $icon-dimensions;
+    width: $icon-dimensions;
+
+    // Sizes
+    &.is-small {
+      height: $icon-dimensions-small;
+      width: $icon-dimensions-small;
+    }
+    &.is-medium {
+      height: $icon-dimensions-medium;
+      width: $icon-dimensions-medium;
+    }
+    &.is-large {
+      height: $icon-dimensions-large;
+      width: $icon-dimensions-large;
+    }
+  }
+}
+
+:host {
+  margin-bottom: 0.75rem;
+}
+
+::slotted(*) {
+  box-sizing: border-box;
+}
+
+@include control("[slot='input']");
+@include input("[slot='input']");
+@include input-textarea("[slot='input']");
+@include controlIcons("[slot='input']");
+@include slottedIcon;
+
+
+::slotted([slot='input'].is-rounded) {
+  border-radius: $radius-rounded;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+::slotted([slot='input'].is-static) {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  padding-left: 0;
+  padding-right: 0;
+}
