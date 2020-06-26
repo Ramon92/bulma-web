@@ -1,6 +1,6 @@
 {
   "name": "@bulma-web/input",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A bulma based input web component",
   "keywords": [
     "bw-input",
