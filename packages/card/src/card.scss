@@ -1,0 +1,31 @@
+@import '../../../node_modules/bulma/sass/utilities/_all.sass';
+@import '../../../node_modules/bulma/sass/base/_all.sass';
+@import '../../../node_modules/bulma/sass/components/card.sass';
+@import '../../../node_modules/bulma/sass/elements/image.sass';
+
+::slotted(p) {
+  margin: 0;
+}
+
+::slotted([slot='image']) {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+::slotted(.card-footer-item) {
+  align-items: center;
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+  justify-content: center;
+  padding: $card-footer-padding;
+  border-right: $card-footer-border-top;
+}
+
+::slotted(.card-footer-item:last-child) {
+  border-right: none;
+}
