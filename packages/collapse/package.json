@@ -1,6 +1,6 @@
 {
   "name": "@bulma-web/collapse",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "bw-Collapse",
   "keywords": [
     "bw-collapse",
@@ -38,7 +38,7 @@
     "url": "https://github.com/Ramon92/bulma-web/issues"
   },
   "dependencies": {
-    "@bulma-web/styles": "^0.1.2",
+    "@bulma-web/styles": "^0.1.3",
     "lit-element": "^2.2.1",
     "lit-html": "^1.1.2"
   }
