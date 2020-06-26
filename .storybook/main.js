@@ -32,7 +32,6 @@ module.exports = {
       plugins: [
         '@babel/plugin-proposal-class-properties',
         ['@babel/proposal-decorators', { decoratorsBeforeExport: true }],
-        '@babel/plugin-syntax-dynamic-import',
         '@babel/plugin-proposal-object-rest-spread',
       ],
     },
