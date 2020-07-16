@@ -24,7 +24,6 @@
     "bootstrap": "lerna bootstrap",
     "@bulma-web/button": "yarn workspace @bulma-web/button",
     "@bulma-web/card": "yarn workspace @bulma-web/card",
-    "@bulma-web/content": "yarn workspace @bulma-web/content",
     "@bulma-web/media": "yarn workspace @bulma-web/media",
     "@bulma-web/collapse": "yarn workspace @bulma-web/collapse",
     "@bulma-web/message": "yarn workspace @bulma-web/message",
