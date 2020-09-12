@@ -929,6 +929,14 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@bulma-web/content@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@bulma-web/content/-/content-0.2.2.tgz#b21da7a8c2517f53da4b52768ee121d64a733572"
+  integrity sha512-gmfRBa6y2viQK8gIO4dQLHZ8sQAJ+TruWdJRbs3P/7Z/f68QJmReZfO9DZygNnLA/rx3Ph3iKxo6kYfO8DpSLA==
+  dependencies:
+    bulma "^0.7.5"
+    lit-element "^2.2.1"
+
 "@bundled-es-modules/message-format@6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@bundled-es-modules/message-format/-/message-format-6.0.4.tgz#232da6877adb960f6c8f598c72588a84352de147"
@@ -9194,9 +9202,9 @@ node-fetch-npm@^2.0.2:
     safe-buffer "^5.1.1"
 
 node-fetch@^2.3.0, node-fetch@^2.5.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
-  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 node-gyp@^3.8.0:
   version "3.8.0"
