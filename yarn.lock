@@ -929,6 +929,14 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@bulma-web/content@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@bulma-web/content/-/content-0.2.2.tgz#b21da7a8c2517f53da4b52768ee121d64a733572"
+  integrity sha512-gmfRBa6y2viQK8gIO4dQLHZ8sQAJ+TruWdJRbs3P/7Z/f68QJmReZfO9DZygNnLA/rx3Ph3iKxo6kYfO8DpSLA==
+  dependencies:
+    bulma "^0.7.5"
+    lit-element "^2.2.1"
+
 "@bundled-es-modules/message-format@6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@bundled-es-modules/message-format/-/message-format-6.0.4.tgz#232da6877adb960f6c8f598c72588a84352de147"
@@ -12024,9 +12032,9 @@ tmp@0.0.x, tmp@^0.0.33:
     os-tmpdir "~1.0.2"
 
 tmpl@1.0.x:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.4.tgz#23640dd7b42d00433911140820e5cf440e521dd1"
-  integrity sha1-I2QN17QtAEM5ERQIIOXPRA5SHdE=
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/tmpl/-/tmpl-1.0.5.tgz#8683e0b902bb9c20c4f726e3c0b69f36518c07cc"
+  integrity sha512-3f0uOEAQwIqGuWW2MVzYg8fV/QNnc/IpuJNG837rLuczAaLVHslWHZQj4IGiEl5Hs3kkbhwL9Ab7Hrsmuj+Smw==
 
 to-fast-properties@^1.0.3:
   version "1.0.3"
