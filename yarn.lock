@@ -929,6 +929,14 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@bulma-web/content@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@bulma-web/content/-/content-0.2.2.tgz#b21da7a8c2517f53da4b52768ee121d64a733572"
+  integrity sha512-gmfRBa6y2viQK8gIO4dQLHZ8sQAJ+TruWdJRbs3P/7Z/f68QJmReZfO9DZygNnLA/rx3Ph3iKxo6kYfO8DpSLA==
+  dependencies:
+    bulma "^0.7.5"
+    lit-element "^2.2.1"
+
 "@bundled-es-modules/message-format@6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@bundled-es-modules/message-format/-/message-format-6.0.4.tgz#232da6877adb960f6c8f598c72588a84352de147"
@@ -11267,9 +11275,9 @@ shebang-regex@^3.0.0:
   integrity sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==
 
 shell-quote@^1.6.1:
-  version "1.7.2"
-  resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
-  integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.3.tgz#aa40edac170445b9a431e17bb62c0b881b9c4123"
+  integrity sha512-Vpfqwm4EnqGdlsBFNmHhxhElJYrdfcxPThu+ryKS5J8L/fhAwLazFZtq+S+TWZ9ANj2piSQLGj6NQg+lKPmxrw==
 
 shellwords@^0.1.1:
   version "0.1.1"
