@@ -929,6 +929,14 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@bulma-web/content@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@bulma-web/content/-/content-0.2.2.tgz#b21da7a8c2517f53da4b52768ee121d64a733572"
+  integrity sha512-gmfRBa6y2viQK8gIO4dQLHZ8sQAJ+TruWdJRbs3P/7Z/f68QJmReZfO9DZygNnLA/rx3Ph3iKxo6kYfO8DpSLA==
+  dependencies:
+    bulma "^0.7.5"
+    lit-element "^2.2.1"
+
 "@bundled-es-modules/message-format@6.0.4":
   version "6.0.4"
   resolved "https://registry.yarnpkg.com/@bundled-es-modules/message-format/-/message-format-6.0.4.tgz#232da6877adb960f6c8f598c72588a84352de147"
@@ -5099,9 +5107,9 @@ decamelize@^1.1.0, decamelize@^1.1.1, decamelize@^1.1.2, decamelize@^1.2.0:
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 dedent@^0.7.0:
   version "0.7.0"
